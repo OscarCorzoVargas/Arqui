@@ -1,0 +1,6 @@
+
+State Machine - |BB_SYSTEM|SC_STATEMACHINE:SC_STATEMACHINE_u0|State_Register
+Name State_Register.State_RESET_0 State_Register.State_END_0 State_Register.State_START_0 
+State_Register.State_RESET_0 0 0 0 
+State_Register.State_START_0 1 0 1 
+State_Register.State_END_0 1 1 0 
