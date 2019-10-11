@@ -1,5 +1,5 @@
 Analysis & Synthesis report for BB_SYSTEM
-Mon Oct 07 12:01:26 2019
+Fri Oct 11 08:46:13 2019
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -13,28 +13,41 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |BB_SYSTEM|SC_STATEMACHINE:SC_STATEMACHINE_u0|State_Register
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Parameter Settings for User Entity Instance: Top-level Entity: |BB_SYSTEM
- 13. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0
- 14. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_RegGENERAL_u0
- 15. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_RegGENERAL_u1
- 16. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_RegGENERAL_u2
- 17. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_RegGENERAL_u3
- 18. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|SC_RegFIXED:SC_RegFIXED_u0
- 19. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|SC_RegFIXED:SC_RegFIXED_u1
- 20. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|SC_RegSHIFTER:SC_RegSHIFTER_u0
- 21. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_u0
- 22. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_u1
- 23. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|CC_MUXX:CC_MUXX_u0
- 24. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|CC_MUXX:CC_MUXX_u1
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |BB_SYSTEM
+ 11. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0
+ 12. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R0
+ 13. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R1
+ 14. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R2
+ 15. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R3
+ 16. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_RS
+ 17. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_PC
+ 18. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_IR
+ 19. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_CLEAR
+ 20. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_C
+ 21. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_A
+ 22. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_B
+ 23. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|CC_MUXX:CC_MUXX_BusA
+ 24. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|CC_MUXX:CC_MUXX_BusB
  25. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|CC_ALU:CC_ALU_u0
- 26. Parameter Settings for User Entity Instance: SC_STATEMACHINE:SC_STATEMACHINE_u0
- 27. Post-Synthesis Netlist Statistics for Top Partition
- 28. Elapsed Time Per Partition
- 29. Analysis & Synthesis Messages
+ 26. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_MUXX:CC_MUXX_BusB"
+ 27. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_MUXX:CC_MUXX_BusA"
+ 28. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_B"
+ 29. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_A"
+ 30. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_C"
+ 31. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_CLEAR"
+ 32. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_IR"
+ 33. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_PC"
+ 34. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_RS"
+ 35. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R3"
+ 36. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R2"
+ 37. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R1"
+ 38. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R0"
+ 39. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0"
+ 40. Post-Synthesis Netlist Statistics for Top Partition
+ 41. Elapsed Time Per Partition
+ 42. Analysis & Synthesis Messages
 
 
 
@@ -61,7 +74,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Oct 07 12:01:26 2019       ;
+; Analysis & Synthesis Status        ; Successful - Fri Oct 11 08:46:12 2019       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; BB_SYSTEM                                   ;
 ; Top-level Entity Name              ; BB_SYSTEM                                   ;
@@ -70,7 +83,7 @@ agreement for further details.
 ;     Total combinational functions  ; 0                                           ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 10                                          ;
+; Total pins                         ; 34                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -181,21 +194,18 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                      ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                        ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------+---------+
-; rtl/uDATAPATH.v                  ; yes             ; User Verilog HDL File  ; C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/rtl/uDATAPATH.v       ;         ;
-; rtl/SC_STATEMACHINE.v            ; yes             ; User Verilog HDL File  ; C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/rtl/SC_STATEMACHINE.v ;         ;
-; rtl/SC_RegSHIFTER.v              ; yes             ; User Verilog HDL File  ; C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/rtl/SC_RegSHIFTER.v   ;         ;
-; rtl/SC_RegGENERAL.v              ; yes             ; User Verilog HDL File  ; C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/rtl/SC_RegGENERAL.v   ;         ;
-; rtl/SC_RegFIXED.v                ; yes             ; User Verilog HDL File  ; C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/rtl/SC_RegFIXED.v     ;         ;
-; rtl/CC_MUXX.v                    ; yes             ; User Verilog HDL File  ; C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/rtl/CC_MUXX.v         ;         ;
-; rtl/CC_DECODER.v                 ; yes             ; User Verilog HDL File  ; C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/rtl/CC_DECODER.v      ;         ;
-; rtl/CC_ALU.v                     ; yes             ; User Verilog HDL File  ; C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/rtl/CC_ALU.v          ;         ;
-; BB_SYSTEM.v                      ; yes             ; User Verilog HDL File  ; C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/BB_SYSTEM.v           ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                       ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                         ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------+---------+
+; rtl/uDATAPATH.v                  ; yes             ; User Verilog HDL File  ; C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v     ;         ;
+; rtl/SC_RegGENERAL.v              ; yes             ; User Verilog HDL File  ; C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/SC_RegGENERAL.v ;         ;
+; rtl/CC_MUXX.v                    ; yes             ; User Verilog HDL File  ; C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/CC_MUXX.v       ;         ;
+; rtl/CC_DECODER.v                 ; yes             ; User Verilog HDL File  ; C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/CC_DECODER.v    ;         ;
+; rtl/CC_ALU.v                     ; yes             ; User Verilog HDL File  ; C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/CC_ALU.v        ;         ;
+; BB_SYSTEM.v                      ; yes             ; User Verilog HDL File  ; C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v         ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------------------------------+
@@ -218,13 +228,13 @@ agreement for further details.
 ;     -- Dedicated logic registers            ; 0                               ;
 ;     -- I/O registers                        ; 0                               ;
 ;                                             ;                                 ;
-; I/O pins                                    ; 10                              ;
+; I/O pins                                    ; 34                              ;
 ;                                             ;                                 ;
 ; Embedded Multiplier 9-bit elements          ; 0                               ;
 ;                                             ;                                 ;
 ; Maximum fan-out node                        ; BB_SYSTEM_data_OutBUS[0]~output ;
 ; Maximum fan-out                             ; 1                               ;
-; Total fan-out                               ; 10                              ;
+; Total fan-out                               ; 34                              ;
 ; Average fan-out                             ; 0.50                            ;
 +---------------------------------------------+---------------------------------+
 
@@ -234,56 +244,25 @@ agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |BB_SYSTEM                 ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 10   ; 0            ; |BB_SYSTEM          ; BB_SYSTEM   ; work         ;
+; |BB_SYSTEM                 ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 34   ; 0            ; |BB_SYSTEM          ; BB_SYSTEM   ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |BB_SYSTEM|SC_STATEMACHINE:SC_STATEMACHINE_u0|State_Register                                            ;
-+------------------------------+------------------------------+----------------------------+------------------------------+
-; Name                         ; State_Register.State_RESET_0 ; State_Register.State_END_0 ; State_Register.State_START_0 ;
-+------------------------------+------------------------------+----------------------------+------------------------------+
-; State_Register.State_RESET_0 ; 0                            ; 0                          ; 0                            ;
-; State_Register.State_START_0 ; 1                            ; 0                          ; 1                            ;
-; State_Register.State_END_0   ; 1                            ; 1                          ; 0                            ;
-+------------------------------+------------------------------+----------------------------+------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                                         ;
-+---------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
-; Register name                                                                   ; Reason for Removal                                                                       ;
-+---------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
-; uDATAPATH:uDATAPATH_u0|SC_RegSHIFTER:SC_RegSHIFTER_u0|RegSHIFTER_Register[0..7] ; Lost fanout                                                                              ;
-; uDATAPATH:uDATAPATH_u0|SC_RegFIXED:SC_RegFIXED_u1|RegFIXED_Register[0..7]       ; Lost fanout                                                                              ;
-; uDATAPATH:uDATAPATH_u0|SC_RegFIXED:SC_RegFIXED_u0|RegFIXED_Register[0..7]       ; Lost fanout                                                                              ;
-; uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_RegGENERAL_u2|RegGENERAL_Register[0..7] ; Lost fanout                                                                              ;
-; uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_RegGENERAL_u1|RegGENERAL_Register[0..7] ; Lost fanout                                                                              ;
-; uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_RegGENERAL_u0|RegGENERAL_Register[0..7] ; Lost fanout                                                                              ;
-; uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_RegGENERAL_u3|RegGENERAL_Register[1..7] ; Merged with uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_RegGENERAL_u3|RegGENERAL_Register[0] ;
-; uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_RegGENERAL_u3|RegGENERAL_Register[0]    ; Stuck at GND due to stuck port data_in                                                   ;
-; SC_STATEMACHINE:SC_STATEMACHINE_u0|State_Register.State_START_0                 ; Lost fanout                                                                              ;
-; SC_STATEMACHINE:SC_STATEMACHINE_u0|State_Register.State_END_0                   ; Lost fanout                                                                              ;
-; SC_STATEMACHINE:SC_STATEMACHINE_u0|State_Register.State_RESET_0                 ; Lost fanout                                                                              ;
-; SC_STATEMACHINE:SC_STATEMACHINE_u0|State_Register~6                             ; Lost fanout                                                                              ;
-; SC_STATEMACHINE:SC_STATEMACHINE_u0|State_Register~7                             ; Lost fanout                                                                              ;
-; SC_STATEMACHINE:SC_STATEMACHINE_u0|State_Register~8                             ; Lost fanout                                                                              ;
-; SC_STATEMACHINE:SC_STATEMACHINE_u0|State_Register~9                             ; Lost fanout                                                                              ;
-; SC_STATEMACHINE:SC_STATEMACHINE_u0|State_Register~10                            ; Lost fanout                                                                              ;
-; SC_STATEMACHINE:SC_STATEMACHINE_u0|State_Register~11                            ; Lost fanout                                                                              ;
-; Total Number of Removed Registers = 65                                          ;                                                                                          ;
-+---------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                            ;
-+-----------------------------------------------------------------+--------------------+-----------------------------------------------------------------+
-; Register name                                                   ; Reason for Removal ; Registers Removed due to This Register                          ;
-+-----------------------------------------------------------------+--------------------+-----------------------------------------------------------------+
-; SC_STATEMACHINE:SC_STATEMACHINE_u0|State_Register.State_START_0 ; Lost Fanouts       ; SC_STATEMACHINE:SC_STATEMACHINE_u0|State_Register.State_RESET_0 ;
-+-----------------------------------------------------------------+--------------------+-----------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                         ;
++-------------------------------------------------------------------+----------------------------------------+
+; Register name                                                     ; Reason for Removal                     ;
++-------------------------------------------------------------------+----------------------------------------+
+; uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_IR|RegGENERAL_Register[0] ; Lost fanout                            ;
+; uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_PC|RegGENERAL_Register[0] ; Lost fanout                            ;
+; uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_RS|RegGENERAL_Register[0] ; Lost fanout                            ;
+; uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R3|RegGENERAL_Register[0] ; Lost fanout                            ;
+; uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R2|RegGENERAL_Register[0] ; Lost fanout                            ;
+; uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R1|RegGENERAL_Register[0] ; Lost fanout                            ;
+; uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R0|RegGENERAL_Register[0] ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 7                             ;                                        ;
++-------------------------------------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -306,10 +285,10 @@ Encoding Type:  One-Hot
 +--------------------------------+----------+-------------------------------+
 ; Parameter Name                 ; Value    ; Type                          ;
 +--------------------------------+----------+-------------------------------+
-; DATAWIDTH_BUS                  ; 8        ; Signed Integer                ;
+; DATAWIDTH_BUS                  ; 32       ; Signed Integer                ;
 ; DATAWIDTH_REGSHIFTER_SELECTION ; 2        ; Signed Integer                ;
-; DATAWIDTH_DECODER_SELECTION    ; 3        ; Signed Integer                ;
-; DATAWIDTH_DECODER_OUT          ; 4        ; Signed Integer                ;
+; DATAWIDTH_DECODER_SELECTION    ; 4        ; Signed Integer                ;
+; DATAWIDTH_DECODER_OUT          ; 12       ; Signed Integer                ;
 ; DATAWIDTH_ALU_SELECTION        ; 4        ; Signed Integer                ;
 ; DATAWIDTH_MUX_SELECTION        ; 3        ; Signed Integer                ;
 ; DATA_REGFIXED_INIT_0           ; 00001001 ; Unsigned Binary               ;
@@ -323,9 +302,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------------+----------+----------------------------+
 ; Parameter Name              ; Value    ; Type                       ;
 +-----------------------------+----------+----------------------------+
-; DATAWIDTH_BUS               ; 8        ; Signed Integer             ;
-; DATAWIDTH_DECODER_SELECTION ; 3        ; Signed Integer             ;
-; DATAWIDTH_DECODER_OUT       ; 4        ; Signed Integer             ;
+; DATAWIDTH_BUS               ; 32       ; Signed Integer             ;
+; DATAWIDTH_DECODER_SELECTION ; 4        ; Signed Integer             ;
+; DATAWIDTH_DECODER_OUT       ; 12       ; Signed Integer             ;
 ; DATAWIDTH_ALU_SELECTION     ; 4        ; Signed Integer             ;
 ; DATAWIDTH_MUX_SELECTION     ; 3        ; Signed Integer             ;
 ; DATA_REGFIXED_INIT_0        ; 00001001 ; Unsigned Binary            ;
@@ -334,119 +313,139 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_RegGENERAL_u0 ;
-+----------------------+-------+---------------------------------------------------------------------+
-; Parameter Name       ; Value ; Type                                                                ;
-+----------------------+-------+---------------------------------------------------------------------+
-; RegGENERAL_DATAWIDTH ; 8     ; Signed Integer                                                      ;
-+----------------------+-------+---------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R0 ;
++----------------------+-------+----------------------------------------------------------+
+; Parameter Name       ; Value ; Type                                                     ;
++----------------------+-------+----------------------------------------------------------+
+; RegGENERAL_DATAWIDTH ; 32    ; Signed Integer                                           ;
++----------------------+-------+----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_RegGENERAL_u1 ;
-+----------------------+-------+---------------------------------------------------------------------+
-; Parameter Name       ; Value ; Type                                                                ;
-+----------------------+-------+---------------------------------------------------------------------+
-; RegGENERAL_DATAWIDTH ; 8     ; Signed Integer                                                      ;
-+----------------------+-------+---------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R1 ;
++----------------------+-------+----------------------------------------------------------+
+; Parameter Name       ; Value ; Type                                                     ;
++----------------------+-------+----------------------------------------------------------+
+; RegGENERAL_DATAWIDTH ; 32    ; Signed Integer                                           ;
++----------------------+-------+----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_RegGENERAL_u2 ;
-+----------------------+-------+---------------------------------------------------------------------+
-; Parameter Name       ; Value ; Type                                                                ;
-+----------------------+-------+---------------------------------------------------------------------+
-; RegGENERAL_DATAWIDTH ; 8     ; Signed Integer                                                      ;
-+----------------------+-------+---------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R2 ;
++----------------------+-------+----------------------------------------------------------+
+; Parameter Name       ; Value ; Type                                                     ;
++----------------------+-------+----------------------------------------------------------+
+; RegGENERAL_DATAWIDTH ; 32    ; Signed Integer                                           ;
++----------------------+-------+----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_RegGENERAL_u3 ;
-+----------------------+-------+---------------------------------------------------------------------+
-; Parameter Name       ; Value ; Type                                                                ;
-+----------------------+-------+---------------------------------------------------------------------+
-; RegGENERAL_DATAWIDTH ; 8     ; Signed Integer                                                      ;
-+----------------------+-------+---------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R3 ;
++----------------------+-------+----------------------------------------------------------+
+; Parameter Name       ; Value ; Type                                                     ;
++----------------------+-------+----------------------------------------------------------+
+; RegGENERAL_DATAWIDTH ; 32    ; Signed Integer                                           ;
++----------------------+-------+----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|SC_RegFIXED:SC_RegFIXED_u0 ;
-+--------------------+----------+----------------------------------------------------------------+
-; Parameter Name     ; Value    ; Type                                                           ;
-+--------------------+----------+----------------------------------------------------------------+
-; DATAWIDTH_BUS      ; 8        ; Signed Integer                                                 ;
-; DATA_REGFIXED_INIT ; 00001001 ; Unsigned Binary                                                ;
-+--------------------+----------+----------------------------------------------------------------+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_RS ;
++----------------------+-------+----------------------------------------------------------+
+; Parameter Name       ; Value ; Type                                                     ;
++----------------------+-------+----------------------------------------------------------+
+; RegGENERAL_DATAWIDTH ; 32    ; Signed Integer                                           ;
++----------------------+-------+----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|SC_RegFIXED:SC_RegFIXED_u1 ;
-+--------------------+----------+----------------------------------------------------------------+
-; Parameter Name     ; Value    ; Type                                                           ;
-+--------------------+----------+----------------------------------------------------------------+
-; DATAWIDTH_BUS      ; 8        ; Signed Integer                                                 ;
-; DATA_REGFIXED_INIT ; 00001111 ; Unsigned Binary                                                ;
-+--------------------+----------+----------------------------------------------------------------+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_PC ;
++----------------------+-------+----------------------------------------------------------+
+; Parameter Name       ; Value ; Type                                                     ;
++----------------------+-------+----------------------------------------------------------+
+; RegGENERAL_DATAWIDTH ; 32    ; Signed Integer                                           ;
++----------------------+-------+----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|SC_RegSHIFTER:SC_RegSHIFTER_u0 ;
-+----------------------+-------+---------------------------------------------------------------------+
-; Parameter Name       ; Value ; Type                                                                ;
-+----------------------+-------+---------------------------------------------------------------------+
-; RegSHIFTER_DATAWIDTH ; 8     ; Signed Integer                                                      ;
-+----------------------+-------+---------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_IR ;
++----------------------+-------+----------------------------------------------------------+
+; Parameter Name       ; Value ; Type                                                     ;
++----------------------+-------+----------------------------------------------------------+
+; RegGENERAL_DATAWIDTH ; 32    ; Signed Integer                                           ;
++----------------------+-------+----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_u0 ;
-+-----------------------------+-------+--------------------------------------------------------+
-; Parameter Name              ; Value ; Type                                                   ;
-+-----------------------------+-------+--------------------------------------------------------+
-; DATAWIDTH_DECODER_SELECTION ; 3     ; Signed Integer                                         ;
-; DATAWIDTH_DECODER_OUT       ; 4     ; Signed Integer                                         ;
-+-----------------------------+-------+--------------------------------------------------------+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_CLEAR ;
++-----------------------------+-------+-----------------------------------------------------------+
+; Parameter Name              ; Value ; Type                                                      ;
++-----------------------------+-------+-----------------------------------------------------------+
+; DATAWIDTH_DECODER_SELECTION ; 4     ; Signed Integer                                            ;
+; DATAWIDTH_DECODER_OUT       ; 12    ; Signed Integer                                            ;
++-----------------------------+-------+-----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_u1 ;
-+-----------------------------+-------+--------------------------------------------------------+
-; Parameter Name              ; Value ; Type                                                   ;
-+-----------------------------+-------+--------------------------------------------------------+
-; DATAWIDTH_DECODER_SELECTION ; 3     ; Signed Integer                                         ;
-; DATAWIDTH_DECODER_OUT       ; 4     ; Signed Integer                                         ;
-+-----------------------------+-------+--------------------------------------------------------+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_C ;
++-----------------------------+-------+-------------------------------------------------------+
+; Parameter Name              ; Value ; Type                                                  ;
++-----------------------------+-------+-------------------------------------------------------+
+; DATAWIDTH_DECODER_SELECTION ; 4     ; Signed Integer                                        ;
+; DATAWIDTH_DECODER_OUT       ; 12    ; Signed Integer                                        ;
++-----------------------------+-------+-------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|CC_MUXX:CC_MUXX_u0 ;
-+-------------------------+-------+------------------------------------------------------+
-; Parameter Name          ; Value ; Type                                                 ;
-+-------------------------+-------+------------------------------------------------------+
-; DATAWIDTH_MUX_SELECTION ; 3     ; Signed Integer                                       ;
-; DATAWIDTH_BUS           ; 8     ; Signed Integer                                       ;
-+-------------------------+-------+------------------------------------------------------+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_A ;
++-----------------------------+-------+-------------------------------------------------------+
+; Parameter Name              ; Value ; Type                                                  ;
++-----------------------------+-------+-------------------------------------------------------+
+; DATAWIDTH_DECODER_SELECTION ; 4     ; Signed Integer                                        ;
+; DATAWIDTH_DECODER_OUT       ; 12    ; Signed Integer                                        ;
++-----------------------------+-------+-------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|CC_MUXX:CC_MUXX_u1 ;
-+-------------------------+-------+------------------------------------------------------+
-; Parameter Name          ; Value ; Type                                                 ;
-+-------------------------+-------+------------------------------------------------------+
-; DATAWIDTH_MUX_SELECTION ; 3     ; Signed Integer                                       ;
-; DATAWIDTH_BUS           ; 8     ; Signed Integer                                       ;
-+-------------------------+-------+------------------------------------------------------+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_B ;
++-----------------------------+-------+-------------------------------------------------------+
+; Parameter Name              ; Value ; Type                                                  ;
++-----------------------------+-------+-------------------------------------------------------+
+; DATAWIDTH_DECODER_SELECTION ; 4     ; Signed Integer                                        ;
+; DATAWIDTH_DECODER_OUT       ; 12    ; Signed Integer                                        ;
++-----------------------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|CC_MUXX:CC_MUXX_BusA ;
++-------------------------+-------+--------------------------------------------------------+
+; Parameter Name          ; Value ; Type                                                   ;
++-------------------------+-------+--------------------------------------------------------+
+; DATAWIDTH_MUX_SELECTION ; 3     ; Signed Integer                                         ;
+; DATAWIDTH_BUS           ; 32    ; Signed Integer                                         ;
++-------------------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|CC_MUXX:CC_MUXX_BusB ;
++-------------------------+-------+--------------------------------------------------------+
+; Parameter Name          ; Value ; Type                                                   ;
++-------------------------+-------+--------------------------------------------------------+
+; DATAWIDTH_MUX_SELECTION ; 3     ; Signed Integer                                         ;
+; DATAWIDTH_BUS           ; 32    ; Signed Integer                                         ;
++-------------------------+-------+--------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -455,23 +454,165 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------+-------+----------------------------------------------------+
 ; Parameter Name          ; Value ; Type                                               ;
 +-------------------------+-------+----------------------------------------------------+
-; DATAWIDTH_BUS           ; 8     ; Signed Integer                                     ;
+; DATAWIDTH_BUS           ; 32    ; Signed Integer                                     ;
 ; DATAWIDTH_ALU_SELECTION ; 4     ; Signed Integer                                     ;
 +-------------------------+-------+----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: SC_STATEMACHINE:SC_STATEMACHINE_u0 ;
-+--------------------------------+-------+----------------------------------------+
-; Parameter Name                 ; Value ; Type                                   ;
-+--------------------------------+-------+----------------------------------------+
-; DATAWIDTH_DECODER_SELECTION    ; 3     ; Signed Integer                         ;
-; DATAWIDTH_MUX_SELECTION        ; 3     ; Signed Integer                         ;
-; DATAWIDTH_ALU_SELECTION        ; 4     ; Signed Integer                         ;
-; DATAWIDTH_REGSHIFTER_SELECTION ; 2     ; Signed Integer                         ;
-+--------------------------------+-------+----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_MUXX:CC_MUXX_BusB"                                                                                                                                                       ;
++------------------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                   ; Type  ; Severity ; Details                                                                                                                                                                           ;
++------------------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; CC_MUX_data0_InBUS     ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "CC_MUX_data0_InBUS[31..1]" will be connected to GND.                      ;
+; CC_MUX_data1_InBUS     ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "CC_MUX_data1_InBUS[31..1]" will be connected to GND.                      ;
+; CC_MUX_data2_InBUS     ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "CC_MUX_data2_InBUS[31..1]" will be connected to GND.                      ;
+; CC_MUX_data3_InBUS     ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "CC_MUX_data3_InBUS[31..1]" will be connected to GND.                      ;
+; CC_MUX_data4_InBUS     ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "CC_MUX_data4_InBUS[31..1]" will be connected to GND.                      ;
+; CC_MUX_data5_InBUS     ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "CC_MUX_data5_InBUS[31..1]" will be connected to GND.                      ;
+; CC_MUX_data6_InBUS     ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "CC_MUX_data6_InBUS[31..1]" will be connected to GND.                      ;
+; CC_MUX_data7_InBUS     ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "CC_MUX_data7_InBUS[31..1]" will be connected to GND.                      ;
+; CC_MUX_selection_InBUS ; Input ; Warning  ; Input port expression (12 bits) is wider than the input port (3 bits) it drives.  The 9 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------------------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_MUXX:CC_MUXX_BusA"                                                                                                                                                       ;
++------------------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                   ; Type  ; Severity ; Details                                                                                                                                                                           ;
++------------------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; CC_MUX_data0_InBUS     ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "CC_MUX_data0_InBUS[31..1]" will be connected to GND.                      ;
+; CC_MUX_data1_InBUS     ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "CC_MUX_data1_InBUS[31..1]" will be connected to GND.                      ;
+; CC_MUX_data2_InBUS     ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "CC_MUX_data2_InBUS[31..1]" will be connected to GND.                      ;
+; CC_MUX_data3_InBUS     ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "CC_MUX_data3_InBUS[31..1]" will be connected to GND.                      ;
+; CC_MUX_data4_InBUS     ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "CC_MUX_data4_InBUS[31..1]" will be connected to GND.                      ;
+; CC_MUX_data5_InBUS     ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "CC_MUX_data5_InBUS[31..1]" will be connected to GND.                      ;
+; CC_MUX_data6_InBUS     ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "CC_MUX_data6_InBUS[31..1]" will be connected to GND.                      ;
+; CC_MUX_data7_InBUS     ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "CC_MUX_data7_InBUS[31..1]" will be connected to GND.                      ;
+; CC_MUX_selection_InBUS ; Input ; Warning  ; Input port expression (12 bits) is wider than the input port (3 bits) it drives.  The 9 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------------------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_B"                                                                     ;
++--------------------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                                 ; Type   ; Severity ; Details                                                                             ;
++--------------------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; CC_DECODER_datadecoder_OutBUS[11..3] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------------------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_A"                                                                     ;
++--------------------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                                 ; Type   ; Severity ; Details                                                                             ;
++--------------------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; CC_DECODER_datadecoder_OutBUS[11..3] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------------------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_C"                                                                     ;
++--------------------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                                 ; Type   ; Severity ; Details                                                                             ;
++--------------------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; CC_DECODER_datadecoder_OutBUS[11..7] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------------------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_CLEAR"                                                                 ;
++--------------------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                                 ; Type   ; Severity ; Details                                                                             ;
++--------------------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; CC_DECODER_datadecoder_OutBUS[11..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------------------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_IR"                                                                                                                             ;
++-----------------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                        ; Type   ; Severity ; Details                                                                                                                                          ;
++-----------------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; SC_RegGENERAL_data_OutBUS_A ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "SC_RegGENERAL_data_OutBUS_A[31..1]" have no fanouts ;
+; SC_RegGENERAL_data_OutBUS_B ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "SC_RegGENERAL_data_OutBUS_B[31..1]" have no fanouts ;
++-----------------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_PC"                                                                                                                             ;
++-----------------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                        ; Type   ; Severity ; Details                                                                                                                                          ;
++-----------------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; SC_RegGENERAL_data_OutBUS_A ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "SC_RegGENERAL_data_OutBUS_A[31..1]" have no fanouts ;
+; SC_RegGENERAL_data_OutBUS_B ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "SC_RegGENERAL_data_OutBUS_B[31..1]" have no fanouts ;
++-----------------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_RS"                                                                                                                             ;
++-----------------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                        ; Type   ; Severity ; Details                                                                                                                                          ;
++-----------------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; SC_RegGENERAL_data_OutBUS_A ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "SC_RegGENERAL_data_OutBUS_A[31..1]" have no fanouts ;
+; SC_RegGENERAL_data_OutBUS_B ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "SC_RegGENERAL_data_OutBUS_B[31..1]" have no fanouts ;
++-----------------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R3"                                                                                                                             ;
++-----------------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                        ; Type   ; Severity ; Details                                                                                                                                          ;
++-----------------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; SC_RegGENERAL_data_OutBUS_A ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "SC_RegGENERAL_data_OutBUS_A[31..1]" have no fanouts ;
+; SC_RegGENERAL_data_OutBUS_B ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "SC_RegGENERAL_data_OutBUS_B[31..1]" have no fanouts ;
++-----------------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R2"                                                                                                                             ;
++-----------------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                        ; Type   ; Severity ; Details                                                                                                                                          ;
++-----------------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; SC_RegGENERAL_data_OutBUS_A ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "SC_RegGENERAL_data_OutBUS_A[31..1]" have no fanouts ;
+; SC_RegGENERAL_data_OutBUS_B ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "SC_RegGENERAL_data_OutBUS_B[31..1]" have no fanouts ;
++-----------------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R1"                                                                                                                             ;
++-----------------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                        ; Type   ; Severity ; Details                                                                                                                                          ;
++-----------------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; SC_RegGENERAL_data_OutBUS_A ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "SC_RegGENERAL_data_OutBUS_A[31..1]" have no fanouts ;
+; SC_RegGENERAL_data_OutBUS_B ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "SC_RegGENERAL_data_OutBUS_B[31..1]" have no fanouts ;
++-----------------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R0"                                                                                                                             ;
++-----------------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                        ; Type   ; Severity ; Details                                                                                                                                          ;
++-----------------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; SC_RegGENERAL_data_OutBUS_A ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "SC_RegGENERAL_data_OutBUS_A[31..1]" have no fanouts ;
+; SC_RegGENERAL_data_OutBUS_B ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "SC_RegGENERAL_data_OutBUS_B[31..1]" have no fanouts ;
++-----------------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0"                                                                                                                                                               ;
++---------------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                      ; Type   ; Severity ; Details                                                                                                                                                          ;
++---------------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; uDATAPATH_overflow_OutLow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                              ;
+; uDATAPATH_carry_OutLow    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                              ;
+; uDATAPATH_negative_OutLow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                              ;
+; uDATAPATH_zero_OutLow     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                              ;
+; uDATAPATH_DECODERA_InBUS  ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "uDATAPATH_DECODERA_InBUS[3..3]" will be connected to GND. ;
+; uDATAPATH_DECODERB_InBUS  ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "uDATAPATH_DECODERB_InBUS[3..3]" will be connected to GND. ;
+; uDATAPATH_DECODERC_InBUS  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                     ;
++---------------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -479,7 +620,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 10                          ;
+; boundary_port         ; 34                          ;
 ; cycloneiii_lcell_comb ; 1                           ;
 ;     normal            ; 1                           ;
 ;         0 data inputs ; 1                           ;
@@ -494,7 +635,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:16     ;
 +----------------+--------------+
 
 
@@ -504,62 +645,97 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Oct 07 12:00:50 2019
+    Info: Processing started: Fri Oct 11 08:45:06 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off BB_SYSTEM -c BB_SYSTEM
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Warning (20031): Parallel compilation is enabled for 4 processors, but there are only 2 processors in the system. Runtime may increase due to over usage of the processor space.
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/udatapath.v
-    Info (12023): Found entity 1: uDATAPATH File: C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/rtl/uDATAPATH.v Line: 21
+    Info (12023): Found entity 1: uDATAPATH File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/sc_statemachine.v
-    Info (12023): Found entity 1: SC_STATEMACHINE File: C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/rtl/SC_STATEMACHINE.v Line: 21
+    Info (12023): Found entity 1: SC_STATEMACHINE File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/SC_STATEMACHINE.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/sc_regshifter.v
-    Info (12023): Found entity 1: SC_RegSHIFTER File: C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/rtl/SC_RegSHIFTER.v Line: 21
+    Info (12023): Found entity 1: SC_RegSHIFTER File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/SC_RegSHIFTER.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/sc_reggeneral.v
-    Info (12023): Found entity 1: SC_RegGENERAL File: C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/rtl/SC_RegGENERAL.v Line: 21
+    Info (12023): Found entity 1: SC_RegGENERAL File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/SC_RegGENERAL.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/sc_regfixed.v
-    Info (12023): Found entity 1: SC_RegFIXED File: C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/rtl/SC_RegFIXED.v Line: 21
+    Info (12023): Found entity 1: SC_RegFIXED File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/SC_RegFIXED.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/cc_muxx.v
-    Info (12023): Found entity 1: CC_MUXX File: C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/rtl/CC_MUXX.v Line: 21
+    Info (12023): Found entity 1: CC_MUXX File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/CC_MUXX.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/cc_decoder.v
-    Info (12023): Found entity 1: CC_DECODER File: C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/rtl/CC_DECODER.v Line: 21
+    Info (12023): Found entity 1: CC_DECODER File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/CC_DECODER.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/cc_alu.v
-    Info (12023): Found entity 1: CC_ALU File: C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/rtl/CC_ALU.v Line: 21
+    Info (12023): Found entity 1: CC_ALU File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/CC_ALU.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file bb_system.v
-    Info (12023): Found entity 1: BB_SYSTEM File: C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/BB_SYSTEM.v Line: 21
+    Info (12023): Found entity 1: BB_SYSTEM File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 21
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(98): created implicit net for "RegGENERAL_2_MUX_data0_wireBUS_A" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 98
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(99): created implicit net for "RegGENERAL_2_MUX_data0_wireBUS_B" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 99
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(108): created implicit net for "RegGENERAL_2_MUX_data1_wireBUS_A" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 108
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(109): created implicit net for "RegGENERAL_2_MUX_data1_wireBUS_B" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 109
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(118): created implicit net for "RegGENERAL_2_MUX_data2_wireBUS_A" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 118
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(119): created implicit net for "RegGENERAL_2_MUX_data2_wireBUS_B" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 119
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(128): created implicit net for "RegGENERAL_2_MUX_data3_wireBUS_A" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 128
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(129): created implicit net for "RegGENERAL_2_MUX_data3_wireBUS_B" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 129
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(138): created implicit net for "RegGENERAL_2_MUX_dataRS_wireBUS_A" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 138
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(139): created implicit net for "RegGENERAL_2_MUX_dataRS_wireBUS_B" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 139
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(148): created implicit net for "RegGENERAL_2_MUX_dataPC_wireBUS_A" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 148
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(149): created implicit net for "RegGENERAL_2_MUX_dataPC_wireBUS_B" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 149
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(158): created implicit net for "RegGENERAL_2_MUX_dataIR_wireBUS_A" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 158
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(159): created implicit net for "RegGENERAL_2_MUX_dataIR_wireBUS_B" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 159
 Info (12127): Elaborating entity "BB_SYSTEM" for the top level hierarchy
-Info (12128): Elaborating entity "uDATAPATH" for hierarchy "uDATAPATH:uDATAPATH_u0" File: C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/BB_SYSTEM.v Line: 96
-Info (12128): Elaborating entity "SC_RegGENERAL" for hierarchy "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_RegGENERAL_u0" File: C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/rtl/uDATAPATH.v Line: 98
-Info (12128): Elaborating entity "SC_RegFIXED" for hierarchy "uDATAPATH:uDATAPATH_u0|SC_RegFIXED:SC_RegFIXED_u0" File: C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/rtl/uDATAPATH.v Line: 134
-Info (12128): Elaborating entity "SC_RegFIXED" for hierarchy "uDATAPATH:uDATAPATH_u0|SC_RegFIXED:SC_RegFIXED_u1" File: C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/rtl/uDATAPATH.v Line: 140
-Info (12128): Elaborating entity "SC_RegSHIFTER" for hierarchy "uDATAPATH:uDATAPATH_u0|SC_RegSHIFTER:SC_RegSHIFTER_u0" File: C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/rtl/uDATAPATH.v Line: 153
-Info (12128): Elaborating entity "CC_DECODER" for hierarchy "uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_u0" File: C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/rtl/uDATAPATH.v Line: 162
-Info (12128): Elaborating entity "CC_MUXX" for hierarchy "uDATAPATH:uDATAPATH_u0|CC_MUXX:CC_MUXX_u0" File: C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/rtl/uDATAPATH.v Line: 187
-Info (12128): Elaborating entity "CC_ALU" for hierarchy "uDATAPATH:uDATAPATH_u0|CC_ALU:CC_ALU_u0" File: C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/rtl/uDATAPATH.v Line: 217
-Warning (10036): Verilog HDL or VHDL warning at CC_ALU.v(52): object "addition0" assigned a value but never read File: C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/rtl/CC_ALU.v Line: 52
-Warning (10036): Verilog HDL or VHDL warning at CC_ALU.v(53): object "addition1" assigned a value but never read File: C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/rtl/CC_ALU.v Line: 53
-Info (12128): Elaborating entity "SC_STATEMACHINE" for hierarchy "SC_STATEMACHINE:SC_STATEMACHINE_u0" File: C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/BB_SYSTEM.v Line: 113
+Info (12128): Elaborating entity "uDATAPATH" for hierarchy "uDATAPATH:uDATAPATH_u0" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 96
+Info (12128): Elaborating entity "SC_RegGENERAL" for hierarchy "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R0" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 105
+Info (12128): Elaborating entity "CC_DECODER" for hierarchy "uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_CLEAR" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 203
+Info (12128): Elaborating entity "CC_MUXX" for hierarchy "uDATAPATH:uDATAPATH_u0|CC_MUXX:CC_MUXX_BusA" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 242
+Info (12128): Elaborating entity "CC_ALU" for hierarchy "uDATAPATH:uDATAPATH_u0|CC_ALU:CC_ALU_u0" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 272
+Warning (10036): Verilog HDL or VHDL warning at CC_ALU.v(52): object "addition0" assigned a value but never read File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/CC_ALU.v Line: 52
+Warning (10036): Verilog HDL or VHDL warning at CC_ALU.v(53): object "addition1" assigned a value but never read File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/CC_ALU.v Line: 53
+Warning (12241): 10 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[0]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[1]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[2]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[3]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[4]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[5]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[6]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[7]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/BB_SYSTEM.v Line: 49
-Info (17049): 57 registers lost all their fanouts during netlist optimizations.
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[0]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[1]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[2]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[3]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[4]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[5]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[6]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[7]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[8]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[9]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[10]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[11]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[12]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[13]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[14]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[15]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[16]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[17]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[18]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[19]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[20]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[21]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[22]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[23]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[24]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[25]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[26]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[27]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[28]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[29]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[30]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[31]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
+Info (17049): 6 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "BB_SYSTEM_CLOCK_50" File: C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/BB_SYSTEM.v Line: 50
-    Warning (15610): No output dependent on input pin "BB_SYSTEM_RESET_InHigh" File: C:/Users/gabo/Documents/2019-2/arquitectura/PRJ0_uDATAPATH_1/PRJ0_uDATAPATH_1/BB_SYSTEM.v Line: 51
-Info (21057): Implemented 10 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "BB_SYSTEM_CLOCK_50" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 50
+    Warning (15610): No output dependent on input pin "BB_SYSTEM_RESET_InHigh" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 51
+Info (21057): Implemented 34 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 8 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 15 warnings
-    Info: Peak virtual memory: 4758 megabytes
-    Info: Processing ended: Mon Oct 07 12:01:26 2019
-    Info: Elapsed time: 00:00:36
-    Info: Total CPU time (on all processors): 00:00:44
+    Info (21059): Implemented 32 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 54 warnings
+    Info: Peak virtual memory: 4749 megabytes
+    Info: Processing ended: Fri Oct 11 08:46:13 2019
+    Info: Elapsed time: 00:01:07
+    Info: Total CPU time (on all processors): 00:00:51
 
 

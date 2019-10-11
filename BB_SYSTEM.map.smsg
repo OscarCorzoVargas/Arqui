@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at SC_RegGENERAL.v(84): always construct contains both blocking and non-blocking assignments File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/PRJ0_uDATAPATH_1/rtl/SC_RegGENERAL.v Line: 84
