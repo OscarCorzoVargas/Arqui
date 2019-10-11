@@ -18,7 +18,7 @@
 //=======================================================
 //  MODULE Definition
 //=======================================================
-module CC_MUXX #(parameter DATAWIDTH_MUX_SELECTION=3, parameter DATAWIDTH_BUS=8)(
+module CC_MUXX #(parameter DATAWIDTH_MUX_SELECTION=4, parameter DATAWIDTH_BUS=8)(
 	//////////// OUTPUTS //////////
 	CC_MUX_data_OutBUS,
 	//////////// INPUTS //////////
@@ -61,14 +61,14 @@ always@(*)
 begin
 	case (CC_MUX_selection_InBUS)	
 	// Example to more outputs: WaitStart: begin sResetCounter = 0; sCuenteUP = 0; end
-		3'b000: CC_MUX_data_OutBUS = CC_MUX_data0_InBUS;
-		3'b001: CC_MUX_data_OutBUS = CC_MUX_data1_InBUS;
-		3'b010: CC_MUX_data_OutBUS = CC_MUX_data2_InBUS;
-		3'b011: CC_MUX_data_OutBUS = CC_MUX_data3_InBUS;
-		3'b100: CC_MUX_data_OutBUS = CC_MUX_data4_InBUS;
-		3'b101: CC_MUX_data_OutBUS = CC_MUX_data5_InBUS;
-		3'b110: CC_MUX_data_OutBUS = CC_MUX_data6_InBUS;
-		3'b111: CC_MUX_data_OutBUS = CC_MUX_data7_InBUS;
+		4'b0000: CC_MUX_data_OutBUS = CC_MUX_data0_InBUS;
+		4'b0001: CC_MUX_data_OutBUS = CC_MUX_data1_InBUS;
+		4'b0010: CC_MUX_data_OutBUS = CC_MUX_data2_InBUS;
+		4'b0011: CC_MUX_data_OutBUS = CC_MUX_data3_InBUS;
+		4'b0100: CC_MUX_data_OutBUS = CC_MUX_data4_InBUS;
+		4'b0101: CC_MUX_data_OutBUS = CC_MUX_data5_InBUS;
+		4'b0110: CC_MUX_data_OutBUS = CC_MUX_data6_InBUS;
+		4'b0111: CC_MUX_data_OutBUS = CC_MUX_data7_InBUS;
 		default :   CC_MUX_data_OutBUS = CC_MUX_data0_InBUS; // channel 0 is selected 
 	endcase
 end

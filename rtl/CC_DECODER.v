@@ -43,21 +43,21 @@ input		[DATAWIDTH_DECODER_SELECTION-1:0] CC_DECODER_selection_InBUS;
 //INPUT LOGIC: COMBINATIONAL
 always@(*)
 begin
-	case (CC_DECODER_selection_InBUS)	
-		4'b0000: CC_DECODER_datadecoder_OutBUS = 12'b000000000000;
-		4'b0001: CC_DECODER_datadecoder_OutBUS = 12'b000000000001;
-		4'b0010: CC_DECODER_datadecoder_OutBUS = 12'b000000000010;
-		4'b0011: CC_DECODER_datadecoder_OutBUS = 12'b000000000100;
-		4'b0100: CC_DECODER_datadecoder_OutBUS = 12'b000000001000;
-		4'b0101: CC_DECODER_datadecoder_OutBUS = 12'b000000010000;
-		4'b0110: CC_DECODER_datadecoder_OutBUS = 12'b000000100000;
-		4'b0111: CC_DECODER_datadecoder_OutBUS = 12'b000001000000;
-		4'b1000: CC_DECODER_datadecoder_OutBUS = 12'b000010000000;
-		4'b1001: CC_DECODER_datadecoder_OutBUS = 12'b000100000000;
-		4'b1010: CC_DECODER_datadecoder_OutBUS = 12'b001000000000;
-		4'b1011: CC_DECODER_datadecoder_OutBUS = 12'b010000000000;
-		4'b1100: CC_DECODER_datadecoder_OutBUS = 12'b100000000000;
-		default : CC_DECODER_datadecoder_OutBUS = 12'b000000000000; 
+	case (CC_DECODER_selection_InBUS)
+		
+		4'b0001: CC_DECODER_datadecoder_OutBUS = 12'b111111111110;
+		4'b0010: CC_DECODER_datadecoder_OutBUS = 12'b111111111101;
+		4'b0011: CC_DECODER_datadecoder_OutBUS = 12'b111111111011;
+		4'b0100: CC_DECODER_datadecoder_OutBUS = 12'b111111110111;
+		4'b0101: CC_DECODER_datadecoder_OutBUS = 12'b111111101111;
+		4'b0110: CC_DECODER_datadecoder_OutBUS = 12'b111111011111;
+		4'b0111: CC_DECODER_datadecoder_OutBUS = 12'b111110111111;
+		4'b1000: CC_DECODER_datadecoder_OutBUS = 12'b111101111111;
+		4'b1001: CC_DECODER_datadecoder_OutBUS = 12'b111011111111;
+		4'b1010: CC_DECODER_datadecoder_OutBUS = 12'b110111111111;
+		4'b1011: CC_DECODER_datadecoder_OutBUS = 12'b101111111111;
+		4'b1100: CC_DECODER_datadecoder_OutBUS = 12'b011111111111;
+		default : CC_DECODER_datadecoder_OutBUS = 12'b111111111111; 
 	endcase
 end
 //=======================================================

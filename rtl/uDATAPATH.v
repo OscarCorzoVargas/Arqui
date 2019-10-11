@@ -18,7 +18,7 @@
 //=======================================================
 //  MODULE Definition
 //=======================================================
-module uDATAPATH #(parameter DATAWIDTH_BUS=8, parameter DATAWIDTH_DECODER_SELECTION=3, parameter DATAWIDTH_DECODER_OUT=4, parameter DATAWIDTH_ALU_SELECTION=4, parameter DATAWIDTH_MUX_SELECTION=3, parameter DATA_REGFIXED_INIT_0=8'b00001001, parameter DATA_REGFIXED_INIT_1=8'b00001111)(
+module uDATAPATH #(parameter DATAWIDTH_BUS=32, parameter DATAWIDTH_DECODER_SELECTION=4, parameter DATAWIDTH_DECODER_OUT=12, parameter DATAWIDTH_ALU_SELECTION=4, parameter DATAWIDTH_MUX_SELECTION=4, parameter DATA_REGFIXED_INIT_0=8'b00001001, parameter DATA_REGFIXED_INIT_1=8'b00001111)(
 	//////////// OUTPUTS //////////
 	uDATAPATH_data_OutBUS,
 	uDATAPATH_overflow_OutLow,
@@ -30,8 +30,9 @@ module uDATAPATH #(parameter DATAWIDTH_BUS=8, parameter DATAWIDTH_DECODER_SELECT
 	uDATAPATH_RESET_InHigh,
 	uDATAPATH_decoderclearselection_InBUS,
 	uDATAPATH_decoderloadselection_InBUS,
-	uDATAPATH_muxselectionBUSA_InBUS,
-	uDATAPATH_muxselectionBUSB_InBUS,
+	uDATAPATH_DECODERA_InBUS,
+	uDATAPATH_DECODERB_InBUS,
+	uDATAPATH_DECODERC_InBUS,
 	uDATAPATH_aluselection_InBUS,
 	uDATAPATH_regSHIFTERclear_InLow,
 	uDATAPATH_regSHIFTERload_InLow,
@@ -54,8 +55,11 @@ input 	uDATAPATH_CLOCK_50;
 input 	uDATAPATH_RESET_InHigh;
 input 	[DATAWIDTH_DECODER_SELECTION-1:0]	uDATAPATH_decoderclearselection_InBUS;
 input 	[DATAWIDTH_DECODER_SELECTION-1:0]	uDATAPATH_decoderloadselection_InBUS;
-input 	[DATAWIDTH_MUX_SELECTION-1:0]	uDATAPATH_muxselectionBUSA_InBUS;
-input 	[DATAWIDTH_MUX_SELECTION-1:0]	uDATAPATH_muxselectionBUSB_InBUS;
+input 	[DATAWIDTH_DECODER_SELECTION-1:0]	uDATAPATH_DECODERA_InBUS;
+input 	[DATAWIDTH_DECODER_SELECTION-1:0]	uDATAPATH_DECODERB_InBUS;
+input 	[DATAWIDTH_DECODER_SELECTION-1:0]	uDATAPATH_DECODERC_InBUS;
+//input 	[DATAWIDTH_MUX_SELECTION-1:0]	uDATAPATH_muxselectionBUSA_InBUS;
+//input 	[DATAWIDTH_MUX_SELECTION-1:0]	uDATAPATH_muxselectionBUSB_InBUS;
 input 	[DATAWIDTH_ALU_SELECTION-1:0]	uDATAPATH_aluselection_InBUS;
 input	uDATAPATH_regSHIFTERclear_InLow;
 input 	uDATAPATH_regSHIFTERload_InLow;
@@ -80,6 +84,8 @@ wire [DATAWIDTH_BUS-1:0] RegSHIFTER_2_RegGENERAL_dataC_wireBUS;
 wire [DATAWIDTH_DECODER_OUT-1:0] DECODER_2_RegGENERAL_decoderclearselection_wireBUS;
 // DECODER CONTROL LOAD
 wire [DATAWIDTH_DECODER_OUT-1:0] DECODER_2_RegGENERAL_decoderloadselection_wireBUS;
+wire [DATAWIDTH_DECODER_OUT-1:0] DECODER_A;
+wire [DATAWIDTH_DECODER_OUT-1:0] DECODER_B;
 
 	//=======================================================
 //  Structural coding
@@ -87,118 +93,167 @@ wire [DATAWIDTH_DECODER_OUT-1:0] DECODER_2_RegGENERAL_decoderloadselection_wireB
 
 //-------------------------------------------------------
 //GENERAL_REGISTERS
-SC_RegGENERAL #(.RegGENERAL_DATAWIDTH(DATAWIDTH_BUS)) SC_RegGENERAL_u0 (
+SC_RegGENERAL #(.RegGENERAL_DATAWIDTH(DATAWIDTH_BUS)) SC_R0 (
 // port map - connection between master ports and signals/registers   
-	.SC_RegGENERAL_data_OutBUS(RegGENERAL_2_MUX_data0_wireBUS),
+	.SC_RegGENERAL_data_OutBUS_A(RegGENERAL_2_MUX_data0_wireBUS_A),
+	.SC_RegGENERAL_data_OutBUS_B(RegGENERAL_2_MUX_data0_wireBUS_B),
 	.SC_RegGENERAL_CLOCK_50(uDATAPATH_CLOCK_50),
 	.SC_RegGENERAL_RESET_InHigh(uDATAPATH_RESET_InHigh),
 	.SC_RegGENERAL_clear_InLow(DECODER_2_RegGENERAL_decoderclearselection_wireBUS[0]),
-	.SC_RegGENERAL_load_InLow(DECODER_2_RegGENERAL_decoderloadselection_wireBUS[0]),
-	.SC_RegGENERAL_data_InBUS(RegSHIFTER_2_RegGENERAL_dataC_wireBUS)
+	.SC_RegGENERAL_DecoC_InLow(DECODER_2_RegGENERAL_decoderloadselection_wireBUS[0]),
+	.SC_RegGENERAL_data_InBUS(uDATAPATH_data_OutBUS)
 );
-SC_RegGENERAL #(.RegGENERAL_DATAWIDTH(DATAWIDTH_BUS)) SC_RegGENERAL_u1 (
+SC_RegGENERAL #(.RegGENERAL_DATAWIDTH(DATAWIDTH_BUS)) SC_R1 (
 // port map - connection between master ports and signals/registers   
-	.SC_RegGENERAL_data_OutBUS(RegGENERAL_2_MUX_data1_wireBUS),
+	.SC_RegGENERAL_data_OutBUS_A(RegGENERAL_2_MUX_data1_wireBUS_A),
+	.SC_RegGENERAL_data_OutBUS_B(RegGENERAL_2_MUX_data1_wireBUS_B),
 	.SC_RegGENERAL_CLOCK_50(uDATAPATH_CLOCK_50),
 	.SC_RegGENERAL_RESET_InHigh(uDATAPATH_RESET_InHigh),
 	.SC_RegGENERAL_clear_InLow(DECODER_2_RegGENERAL_decoderclearselection_wireBUS[1]),
-	.SC_RegGENERAL_load_InLow(DECODER_2_RegGENERAL_decoderloadselection_wireBUS[1]),
-	.SC_RegGENERAL_data_InBUS(RegSHIFTER_2_RegGENERAL_dataC_wireBUS)
+	.SC_RegGENERAL_DecoC_InLow(DECODER_2_RegGENERAL_decoderloadselection_wireBUS[1]),
+	.SC_RegGENERAL_data_InBUS(uDATAPATH_data_OutBUS)
 );
-SC_RegGENERAL #(.RegGENERAL_DATAWIDTH(DATAWIDTH_BUS)) SC_RegGENERAL_u2 (
+SC_RegGENERAL #(.RegGENERAL_DATAWIDTH(DATAWIDTH_BUS)) SC_R2 (
 // port map - connection between master ports and signals/registers   
-	.SC_RegGENERAL_data_OutBUS(RegGENERAL_2_MUX_data2_wireBUS),
+	.SC_RegGENERAL_data_OutBUS_A(RegGENERAL_2_MUX_data2_wireBUS_A),
+	.SC_RegGENERAL_data_OutBUS_B(RegGENERAL_2_MUX_data2_wireBUS_B),
 	.SC_RegGENERAL_CLOCK_50(uDATAPATH_CLOCK_50),
 	.SC_RegGENERAL_RESET_InHigh(uDATAPATH_RESET_InHigh),
 	.SC_RegGENERAL_clear_InLow(DECODER_2_RegGENERAL_decoderclearselection_wireBUS[2]),
-	.SC_RegGENERAL_load_InLow(DECODER_2_RegGENERAL_decoderloadselection_wireBUS[2]),
-	.SC_RegGENERAL_data_InBUS(RegSHIFTER_2_RegGENERAL_dataC_wireBUS)
+	.SC_RegGENERAL_DecoC_InLow(DECODER_2_RegGENERAL_decoderloadselection_wireBUS[2]),
+	.SC_RegGENERAL_data_InBUS(uDATAPATH_data_OutBUS)
 );
-SC_RegGENERAL #(.RegGENERAL_DATAWIDTH(DATAWIDTH_BUS)) SC_RegGENERAL_u3 (
+SC_RegGENERAL #(.RegGENERAL_DATAWIDTH(DATAWIDTH_BUS)) SC_R3(
 // port map - connection between master ports and signals/registers   
-	.SC_RegGENERAL_data_OutBUS(RegGENERAL_2_MUX_data3_wireBUS),
+	.SC_RegGENERAL_data_OutBUS_A(RegGENERAL_2_MUX_data3_wireBUS_A),
+	.SC_RegGENERAL_data_OutBUS_B(RegGENERAL_2_MUX_data3_wireBUS_B),
 	.SC_RegGENERAL_CLOCK_50(uDATAPATH_CLOCK_50),
 	.SC_RegGENERAL_RESET_InHigh(uDATAPATH_RESET_InHigh),
 	.SC_RegGENERAL_clear_InLow(DECODER_2_RegGENERAL_decoderclearselection_wireBUS[3]),
-	.SC_RegGENERAL_load_InLow(DECODER_2_RegGENERAL_decoderloadselection_wireBUS[3]),
-	.SC_RegGENERAL_data_InBUS(RegSHIFTER_2_RegGENERAL_dataC_wireBUS)
+	.SC_RegGENERAL_DecoC_InLow(DECODER_2_RegGENERAL_decoderloadselection_wireBUS[3]),
+	.SC_RegGENERAL_data_InBUS(uDATAPATH_data_OutBUS)
 );
+SC_RegGENERAL #(.RegGENERAL_DATAWIDTH(DATAWIDTH_BUS)) SC_RS(
+// port map - connection between master ports and signals/registers   
+	.SC_RegGENERAL_data_OutBUS_A(RegGENERAL_2_MUX_dataRS_wireBUS_A),
+	.SC_RegGENERAL_data_OutBUS_B(RegGENERAL_2_MUX_dataRS_wireBUS_B),
+	.SC_RegGENERAL_CLOCK_50(uDATAPATH_CLOCK_50),
+	.SC_RegGENERAL_RESET_InHigh(uDATAPATH_RESET_InHigh),
+	.SC_RegGENERAL_clear_InLow(DECODER_2_RegGENERAL_decoderclearselection_wireBUS[3]),
+	.SC_RegGENERAL_DecoC_InLow(DECODER_2_RegGENERAL_decoderloadselection_wireBUS[4]),
+	.SC_RegGENERAL_data_InBUS(uDATAPATH_data_OutBUS)
+);
+SC_RegGENERAL #(.RegGENERAL_DATAWIDTH(DATAWIDTH_BUS)) SC_PC(
+// port map - connection between master ports and signals/registers   
+	.SC_RegGENERAL_data_OutBUS_A(RegGENERAL_2_MUX_dataPC_wireBUS_A),
+	.SC_RegGENERAL_data_OutBUS_B(RegGENERAL_2_MUX_dataPC_wireBUS_B),
+	.SC_RegGENERAL_CLOCK_50(uDATAPATH_CLOCK_50),
+	.SC_RegGENERAL_RESET_InHigh(uDATAPATH_RESET_InHigh),
+	.SC_RegGENERAL_clear_InLow(DECODER_2_RegGENERAL_decoderclearselection_wireBUS[3]),
+	.SC_RegGENERAL_DecoC_InLow(DECODER_2_RegGENERAL_decoderloadselection_wireBUS[5]),
+	.SC_RegGENERAL_data_InBUS(uDATAPATH_data_OutBUS)
+);
+SC_RegGENERAL #(.RegGENERAL_DATAWIDTH(DATAWIDTH_BUS)) SC_IR(
+// port map - connection between master ports and signals/registers   
+	.SC_RegGENERAL_data_OutBUS_A(RegGENERAL_2_MUX_dataIR_wireBUS_A),
+	.SC_RegGENERAL_data_OutBUS_B(RegGENERAL_2_MUX_dataIR_wireBUS_B),
+	.SC_RegGENERAL_CLOCK_50(uDATAPATH_CLOCK_50),
+	.SC_RegGENERAL_RESET_InHigh(uDATAPATH_RESET_InHigh),
+	.SC_RegGENERAL_clear_InLow(DECODER_2_RegGENERAL_decoderclearselection_wireBUS[3]),
+	.SC_RegGENERAL_DecoC_InLow(DECODER_2_RegGENERAL_decoderloadselection_wireBUS[6]),
+	.SC_RegGENERAL_data_InBUS(uDATAPATH_data_OutBUS)
+);
+
 //-------------------------------------------------------
 //-------------------------------------------------------
 // FIXED_REGISTERS
-SC_RegFIXED #(.DATAWIDTH_BUS(DATAWIDTH_BUS), .DATA_REGFIXED_INIT(DATA_REGFIXED_INIT_0)) SC_RegFIXED_u0 (
+//SC_RegFIXED #(.DATAWIDTH_BUS(DATAWIDTH_BUS), .DATA_REGFIXED_INIT(DATA_REGFIXED_INIT_0)) SC_RegFIXED_u0 (
 // port map - connection between master ports and signals/registers   
-	.SC_RegFIXED_data_OutBUS(RegFIXED_2_MUX_data0_wireBUS),
-	.SC_RegFIXED_CLOCK_50(uDATAPATH_CLOCK_50),
-	.SC_RegFIXED_RESET_InHigh(uDATAPATH_RESET_InHigh)
-);
-SC_RegFIXED #(.DATAWIDTH_BUS(DATAWIDTH_BUS), .DATA_REGFIXED_INIT(DATA_REGFIXED_INIT_1)) SC_RegFIXED_u1 (
+//	.SC_RegFIXED_data_OutBUS(RegFIXED_2_MUX_data0_wireBUS),
+//	.SC_RegFIXED_CLOCK_50(uDATAPATH_CLOCK_50),
+//	.SC_RegFIXED_RESET_InHigh(uDATAPATH_RESET_InHigh)
+//);
+//SC_RegFIXED #(.DATAWIDTH_BUS(DATAWIDTH_BUS), .DATA_REGFIXED_INIT(DATA_REGFIXED_INIT_1)) SC_RegFIXED_u1 (
 // port map - connection between master ports and signals/registers   
-	.SC_RegFIXED_data_OutBUS(RegFIXED_2_MUX_data1_wireBUS),
-	.SC_RegFIXED_CLOCK_50(uDATAPATH_CLOCK_50),
-	.SC_RegFIXED_RESET_InHigh(uDATAPATH_RESET_InHigh)
-);
+//	.SC_RegFIXED_data_OutBUS(RegFIXED_2_MUX_data1_wireBUS),
+//	.SC_RegFIXED_CLOCK_50(uDATAPATH_CLOCK_50),
+//	.SC_RegFIXED_RESET_InHigh(uDATAPATH_RESET_InHigh)
+//);
 //-------------------------------------------------------
 //-------------------------------------------------------
 // SHIFT_REGISTER
-SC_RegSHIFTER #(.RegSHIFTER_DATAWIDTH(DATAWIDTH_BUS)) SC_RegSHIFTER_u0 (
+//SC_RegSHIFTER #(.RegSHIFTER_DATAWIDTH(DATAWIDTH_BUS)) SC_RegSHIFTER_u0 (
 // port map - connection between master ports and signals/registers   
-	.SC_RegSHIFTER_data_OutBUS(RegSHIFTER_2_RegGENERAL_dataC_wireBUS),
-	.SC_RegSHIFTER_CLOCK_50(uDATAPATH_CLOCK_50),
-	.SC_RegSHIFTER_RESET_InHigh(uDATAPATH_RESET_InHigh),
-	.SC_RegSHIFTER_clear_InLow(uDATAPATH_regSHIFTERclear_InLow),
-	.SC_RegSHIFTER_load_InLow(uDATAPATH_regSHIFTERload_InLow),
-	.SC_RegSHIFTER_shiftselection_InLow(uDATAPATH_regSHIFTERshiftselection_InLow),
-	.SC_RegSHIFTER_data_InBUS(ALU_2_RegSHIFTER_data_wireBUS)
-);
+//	.SC_RegSHIFTER_data_OutBUS(RegSHIFTER_2_RegGENERAL_dataC_wireBUS),
+//	.SC_RegSHIFTER_CLOCK_50(uDATAPATH_CLOCK_50),
+//	.SC_RegSHIFTER_RESET_InHigh(uDATAPATH_RESET_InHigh),
+//	.SC_RegSHIFTER_clear_InLow(uDATAPATH_regSHIFTERclear_InLow),
+//	.SC_RegSHIFTER_load_InLow(uDATAPATH_regSHIFTERload_InLow),
+//	.SC_RegSHIFTER_shiftselection_InLow(uDATAPATH_regSHIFTERshiftselection_InLow),
+//	.SC_RegSHIFTER_data_InBUS(ALU_2_RegSHIFTER_data_wireBUS)
+//);
 //-------------------------------------------------------
 //-------------------------------------------------------
 // 
-CC_DECODER #(.DATAWIDTH_DECODER_SELECTION(DATAWIDTH_DECODER_SELECTION), .DATAWIDTH_DECODER_OUT(DATAWIDTH_DECODER_OUT)) CC_DECODER_u0
+CC_DECODER #(.DATAWIDTH_DECODER_SELECTION(DATAWIDTH_DECODER_SELECTION), .DATAWIDTH_DECODER_OUT(DATAWIDTH_DECODER_OUT)) CC_DECODER_CLEAR
 (
 // port map - connection between master ports and signals/registers   
 	.CC_DECODER_datadecoder_OutBUS(DECODER_2_RegGENERAL_decoderclearselection_wireBUS),
 	.CC_DECODER_selection_InBUS(uDATAPATH_decoderclearselection_InBUS)
 );
 // 
-CC_DECODER #(.DATAWIDTH_DECODER_SELECTION(DATAWIDTH_DECODER_SELECTION), .DATAWIDTH_DECODER_OUT(DATAWIDTH_DECODER_OUT)) CC_DECODER_u1
+CC_DECODER #(.DATAWIDTH_DECODER_SELECTION(DATAWIDTH_DECODER_SELECTION), .DATAWIDTH_DECODER_OUT(DATAWIDTH_DECODER_OUT)) CC_DECODER_C
 (
 // port map - connection between master ports and signals/registers   
 	.CC_DECODER_datadecoder_OutBUS(DECODER_2_RegGENERAL_decoderloadselection_wireBUS),
-	.CC_DECODER_selection_InBUS(uDATAPATH_decoderloadselection_InBUS)
+	.CC_DECODER_selection_InBUS(uDATAPATH_DECODERC_InBUS)
+);
+//
+CC_DECODER #(.DATAWIDTH_DECODER_SELECTION(DATAWIDTH_DECODER_SELECTION), .DATAWIDTH_DECODER_OUT(DATAWIDTH_DECODER_OUT)) CC_DECODER_A
+(
+// port map - connection between master ports and signals/registers   
+	.CC_DECODER_datadecoder_OutBUS(DECODER_A),
+	.CC_DECODER_selection_InBUS(uDATAPATH_DECODERA_InBUS)
+);
+//
+CC_DECODER #(.DATAWIDTH_DECODER_SELECTION(DATAWIDTH_DECODER_SELECTION), .DATAWIDTH_DECODER_OUT(DATAWIDTH_DECODER_OUT)) CC_DECODER_B
+(
+// port map - connection between master ports and signals/registers   
+	.CC_DECODER_datadecoder_OutBUS(DECODER_B),
+	.CC_DECODER_selection_InBUS(uDATAPATH_DECODERB_InBUS)
 );
 //-------------------------------------------------------
 //-------------------------------------------------------
 // 
-CC_MUXX #(.DATAWIDTH_MUX_SELECTION(DATAWIDTH_MUX_SELECTION), .DATAWIDTH_BUS(DATAWIDTH_BUS)) CC_MUXX_u0
+CC_MUXX #(.DATAWIDTH_MUX_SELECTION(DATAWIDTH_MUX_SELECTION), .DATAWIDTH_BUS(DATAWIDTH_BUS)) CC_MUXX_BusA
 (
 // port map - connection between master ports and signals/registers   
 	.CC_MUX_data_OutBUS(MUX_2_ALU_dataA_wireBUS),
-	.CC_MUX_data0_InBUS(RegGENERAL_2_MUX_data0_wireBUS), 
-	.CC_MUX_data1_InBUS(RegGENERAL_2_MUX_data1_wireBUS), 
-	.CC_MUX_data2_InBUS(RegGENERAL_2_MUX_data2_wireBUS), 
-	.CC_MUX_data3_InBUS(RegGENERAL_2_MUX_data3_wireBUS), 
-	.CC_MUX_data4_InBUS(RegFIXED_2_MUX_data0_wireBUS), 
-	.CC_MUX_data5_InBUS(RegFIXED_2_MUX_data1_wireBUS),
-	.CC_MUX_data6_InBUS(RegGENERAL_2_MUX_data0_wireBUS), //REPEATED BUT MUST CHANGE
-	.CC_MUX_data7_InBUS(RegGENERAL_2_MUX_data0_wireBUS), //REPEATED BUT MUST CHANGE
-	.CC_MUX_selection_InBUS(uDATAPATH_muxselectionBUSA_InBUS)
+	.CC_MUX_data0_InBUS(RegGENERAL_2_MUX_data0_wireBUS_A), 
+	.CC_MUX_data1_InBUS(RegGENERAL_2_MUX_data1_wireBUS_A), 
+	.CC_MUX_data2_InBUS(RegGENERAL_2_MUX_data2_wireBUS_A), 
+	.CC_MUX_data3_InBUS(RegGENERAL_2_MUX_data3_wireBUS_A), 
+	.CC_MUX_data4_InBUS(RegGENERAL_2_MUX_dataRS_wireBUS_A), 
+	.CC_MUX_data5_InBUS(RegGENERAL_2_MUX_dataPC_wireBUS_A),
+	.CC_MUX_data6_InBUS(RegGENERAL_2_MUX_dataIR_wireBUS_A), //REPEATED BUT MUST CHANGE
+	.CC_MUX_data7_InBUS(RegGENERAL_2_MUX_data0_wireBUS_A), //REPEATED BUT MUST CHANGE
+	.CC_MUX_selection_InBUS(DECODER_A)
 
 );
-// 
-CC_MUXX #(.DATAWIDTH_MUX_SELECTION(DATAWIDTH_MUX_SELECTION), .DATAWIDTH_BUS(DATAWIDTH_BUS)) CC_MUXX_u1
+//// 
+CC_MUXX #(.DATAWIDTH_MUX_SELECTION(DATAWIDTH_MUX_SELECTION), .DATAWIDTH_BUS(DATAWIDTH_BUS)) CC_MUXX_BusB
 (
 // port map - connection between master ports and signals/registers   
 	.CC_MUX_data_OutBUS(MUX_2_ALU_dataB_wireBUS),
-	.CC_MUX_data0_InBUS(RegGENERAL_2_MUX_data0_wireBUS), 
-	.CC_MUX_data1_InBUS(RegGENERAL_2_MUX_data1_wireBUS), 
-	.CC_MUX_data2_InBUS(RegGENERAL_2_MUX_data2_wireBUS), 
-	.CC_MUX_data3_InBUS(RegGENERAL_2_MUX_data3_wireBUS), 
-	.CC_MUX_data4_InBUS(RegFIXED_2_MUX_data0_wireBUS), 
-	.CC_MUX_data5_InBUS(RegFIXED_2_MUX_data1_wireBUS),
-	.CC_MUX_data6_InBUS(RegGENERAL_2_MUX_data0_wireBUS), //REPEATED BUT MUST CHANGE
-	.CC_MUX_data7_InBUS(RegGENERAL_2_MUX_data0_wireBUS), //REPEATED BUT MUST CHANGE
-	.CC_MUX_selection_InBUS(uDATAPATH_muxselectionBUSB_InBUS)
+	.CC_MUX_data0_InBUS(RegGENERAL_2_MUX_data0_wireBUS_B), 
+	.CC_MUX_data1_InBUS(RegGENERAL_2_MUX_data1_wireBUS_B), 
+	.CC_MUX_data2_InBUS(RegGENERAL_2_MUX_data2_wireBUS_B), 
+	.CC_MUX_data3_InBUS(RegGENERAL_2_MUX_data3_wireBUS_B), 
+	.CC_MUX_data4_InBUS(RegGENERAL_2_MUX_dataRS_wireBUS_B), 
+	.CC_MUX_data5_InBUS(RegGENERAL_2_MUX_dataPC_wireBUS_B),
+	.CC_MUX_data6_InBUS(RegGENERAL_2_MUX_dataIR_wireBUS_B), //REPEATED BUT MUST CHANGE
+	.CC_MUX_data7_InBUS(RegGENERAL_2_MUX_data0_wireBUS_B), //REPEATED BUT MUST CHANGE
+	.CC_MUX_selection_InBUS(DECODER_B)
 );
 //-------------------------------------------------------
 //-------------------------------------------------------
@@ -210,13 +265,13 @@ CC_ALU #(.DATAWIDTH_BUS(DATAWIDTH_BUS), .DATAWIDTH_ALU_SELECTION(DATAWIDTH_ALU_S
 	.CC_ALU_carry_OutLow(uDATAPATH_carry_OutLow), 
 	.CC_ALU_negative_OutLow(uDATAPATH_negative_OutLow), 
 	.CC_ALU_zero_OutLow(uDATAPATH_zero_OutLow),
-	.CC_ALU_data_OutBUS(ALU_2_RegSHIFTER_data_wireBUS),
+	.CC_ALU_data_OutBUS(uDATAPATH_data_OutBUS),
 	.CC_ALU_dataA_InBUS(MUX_2_ALU_dataA_wireBUS), 
 	.CC_ALU_dataB_InBUS(MUX_2_ALU_dataB_wireBUS),
 	.CC_ALU_selection_InBUS(uDATAPATH_aluselection_InBUS)
 );
 //-------------------------------------------------------
-assign uDATAPATH_data_OutBUS = RegGENERAL_2_MUX_data3_wireBUS;
+//assign uDATAPATH_data_OutBUS = RegGENERAL_2_MUX_data3_wireBUS_A;
 
 endmodule
 

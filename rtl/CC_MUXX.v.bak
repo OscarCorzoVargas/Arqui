@@ -18,16 +18,19 @@
 //=======================================================
 //  MODULE Definition
 //=======================================================
-module SC_RegGENERAL #(parameter RegGENERAL_DATAWIDTH=32)(
+module CC_MUXX #(parameter DATAWIDTH_MUX_SELECTION=3, parameter DATAWIDTH_BUS=8)(
 	//////////// OUTPUTS //////////
-	SC_RegGENERAL_data_OutBUS_A,
-	SC_RegGENERAL_data_OutBUS_B,
+	CC_MUX_data_OutBUS,
 	//////////// INPUTS //////////
-	SC_RegGENERAL_CLOCK_50,
-	SC_RegGENERAL_RESET_InHigh,
-	SC_RegGENERAL_clear_InLow,
-	SC_RegGENERAL_DecoC_InLow, 
-	SC_RegGENERAL_data_InBUS
+	CC_MUX_data0_InBUS,
+	CC_MUX_data1_InBUS,
+	CC_MUX_data2_InBUS,	
+	CC_MUX_data3_InBUS,	
+	CC_MUX_data4_InBUS,	
+	CC_MUX_data5_InBUS,	
+	CC_MUX_data6_InBUS,	
+	CC_MUX_data7_InBUS,	
+	CC_MUX_selection_InBUS
 );
 //=======================================================
 //  PARAMETER declarations
@@ -36,58 +39,43 @@ module SC_RegGENERAL #(parameter RegGENERAL_DATAWIDTH=32)(
 //=======================================================
 //  PORT declarations
 //=======================================================
-output 		[RegGENERAL_DATAWIDTH-1:0]	SC_RegGENERAL_data_OutBUS_A;
-output 		[RegGENERAL_DATAWIDTH-1:0]	SC_RegGENERAL_data_OutBUS_B;
-input		SC_RegGENERAL_CLOCK_50;
-input		SC_RegGENERAL_RESET_InHigh;
-input		SC_RegGENERAL_clear_InLow;
-input		SC_RegGENERAL_DecoC_InLow;	
-input		[RegGENERAL_DATAWIDTH-1:0]	SC_RegGENERAL_data_InBUS;
-
+output reg	[DATAWIDTH_BUS-1:0] CC_MUX_data_OutBUS;
+input			[DATAWIDTH_BUS-1:0] CC_MUX_data0_InBUS;
+input			[DATAWIDTH_BUS-1:0] CC_MUX_data1_InBUS;
+input			[DATAWIDTH_BUS-1:0] CC_MUX_data2_InBUS;
+input			[DATAWIDTH_BUS-1:0] CC_MUX_data3_InBUS;	
+input			[DATAWIDTH_BUS-1:0] CC_MUX_data4_InBUS;
+input			[DATAWIDTH_BUS-1:0] CC_MUX_data5_InBUS;
+input			[DATAWIDTH_BUS-1:0] CC_MUX_data6_InBUS;
+input			[DATAWIDTH_BUS-1:0] CC_MUX_data7_InBUS;
+input			[DATAWIDTH_MUX_SELECTION-1:0] CC_MUX_selection_InBUS;
 //=======================================================
 //  REG/WIRE declarations
 //=======================================================
-reg [RegGENERAL_DATAWIDTH-1:0] RegGENERAL_Register;
-reg [RegGENERAL_DATAWIDTH-1:0] RegGENERAL_Signal;
+
 //=======================================================
 //  Structural coding
 //=======================================================
 //INPUT LOGIC: COMBINATIONAL
-always @(*)
+always@(*)
 begin
-	if (SC_RegGENERAL_clear_InLow == 1'b0)
-		RegGENERAL_Signal = 0;
-	else if (SC_RegGENERAL_DecoC_InLow == 1'b0)
-		RegGENERAL_Signal = SC_RegGENERAL_data_InBUS;	
-	else
-		RegGENERAL_Signal = RegGENERAL_Register;
-	end	
-//
-//STATE REGISTER: SEQUENTIAL
-//
-always @(posedge SC_RegGENERAL_CLOCK_50, posedge SC_RegGENERAL_RESET_InHigh)
-begin
-	if (SC_RegGENERAL_RESET_InHigh == 1'b1)
-		RegGENERAL_Register <= 0;
-	else
-		RegGENERAL_Register <= RegGENERAL_Signal;
+	case (CC_MUX_selection_InBUS)	
+	// Example to more outputs: WaitStart: begin sResetCounter = 0; sCuenteUP = 0; end
+		3'b000: CC_MUX_data_OutBUS = CC_MUX_data0_InBUS;
+		3'b001: CC_MUX_data_OutBUS = CC_MUX_data1_InBUS;
+		3'b010: CC_MUX_data_OutBUS = CC_MUX_data2_InBUS;
+		3'b011: CC_MUX_data_OutBUS = CC_MUX_data3_InBUS;
+		3'b100: CC_MUX_data_OutBUS = CC_MUX_data4_InBUS;
+		3'b101: CC_MUX_data_OutBUS = CC_MUX_data5_InBUS;
+		3'b110: CC_MUX_data_OutBUS = CC_MUX_data6_InBUS;
+		3'b111: CC_MUX_data_OutBUS = CC_MUX_data7_InBUS;
+		default :   CC_MUX_data_OutBUS = CC_MUX_data0_InBUS; // channel 0 is selected 
+	endcase
 end
 //=======================================================
 //  Outputs
 //=======================================================
-//OUTPUT LOGIC: COMBINATIONAL
-assign SC_RegGENERAL_data_OutBUS_A = RegGENERAL_Register;
-assign SC_RegGENERAL_data_OutBUS_B = RegGENERAL_Register;
-
-//always @(*)
-//begin
-//	if (SC_RegGENERAL_DecoA_InLow == 1'b0)
-//		assign SC_RegGENERAL_data_OutBUS_A = RegGENERAL_Register;
-//	else if (SC_RegGENERAL_DecoB_InLow == 1'b0) 
-//		assign SC_RegGENERAL_data_OutBUS_B = RegGENERAL_Register;
-//	else
-//		assign SC_RegGENERAL_data_OutBUS_A <= 0;
-//		assign SC_RegGENERAL_data_OutBUS_B <= 0;
-//end
+// OUTPUT LOGIC : COMBINATIONAL
 
 endmodule
+
