@@ -1,4 +1,4 @@
-module CC_MUXX_BUS #(parameter DATAWIDTH_MUX_SELECTION_REG=5,parameter DATAWIDTH_MUX_SELECTION_CONTROL=6, parameter DATAWIDUS=4)(
+module CC_MUXX_BUS #(parameter DATAWIDTH_MUX_SELECTION_REG=5,parameter DATAWIDTH_MUX_SELECTION_CONTROL=6, parameter DATAWIDTH_BUS=4)(
 	//////////// OUTPUTS //////////TH_B
 	CC_MUX_data_OutBUS,
 	//////////// INPUTS //////////
@@ -15,7 +15,7 @@ module CC_MUXX_BUS #(parameter DATAWIDTH_MUX_SELECTION_REG=5,parameter DATAWIDTH
 //=======================================================
 output reg	[DATAWIDTH_BUS-1:0] CC_MUX_data_OutBUS;
 input			[DATAWIDTH_MUX_SELECTION_REG-1:0] CC_MUX_registro_InBUS;
-input			[DATAWIDTH__MUX_SELECTION_CONTROL-1:0] CC_MUX_control_InBUS;
+input			[DATAWIDTH_MUX_SELECTION_CONTROL-1:0] CC_MUX_control_InBUS;
 input		    CC_MUX_selector_InBUS;
 
 //=======================================================
@@ -29,7 +29,7 @@ input		    CC_MUX_selector_InBUS;
 always@(*)
 begin
    if(CC_MUX_selector_InBUS==1'b0)
-		case (CC_MUX_control_InBUS;)	
+		case (CC_MUX_control_InBUS)	
 		// Example to more outputs: WaitStart: begin sResetCounter = 0; sCuenteUP = 0; end
 			6'b000000: CC_MUX_data_OutBUS = 4'b0000;
 			6'b000001: CC_MUX_data_OutBUS = 4'b0001;
@@ -46,7 +46,7 @@ begin
 			default :   CC_MUX_data_OutBUS = 4'b0000; // channel 0 is selected 
 		endcase
 	else
-		case (CC_MUX_control_InBUS;)	
+		case (CC_MUX_control_InBUS)	
 			// Example to more outputs: WaitStart: begin sResetCounter = 0; sCuenteUP = 0; end
 				5'b00000: CC_MUX_data_OutBUS = 4'b0000;
 				5'b00001: CC_MUX_data_OutBUS = 4'b0001;
@@ -69,4 +69,3 @@ end
 // OUTPUT LOGIC : COMBINATIONAL
 
 endmodule
-
