@@ -1,6 +1,6 @@
 Analysis & Synthesis report for BB_SYSTEM
-Fri Oct 11 08:46:13 2019
-Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+Tue Oct 15 20:01:03 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
@@ -31,30 +31,32 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
  23. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|CC_MUXX:CC_MUXX_BusA
  24. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|CC_MUXX:CC_MUXX_BusB
  25. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|CC_ALU:CC_ALU_u0
- 26. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_MUXX:CC_MUXX_BusB"
- 27. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_MUXX:CC_MUXX_BusA"
- 28. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_B"
- 29. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_A"
- 30. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_C"
- 31. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_CLEAR"
- 32. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_IR"
- 33. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_PC"
- 34. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_RS"
- 35. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R3"
- 36. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R2"
- 37. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R1"
- 38. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R0"
- 39. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0"
- 40. Post-Synthesis Netlist Statistics for Top Partition
- 41. Elapsed Time Per Partition
- 42. Analysis & Synthesis Messages
+ 26. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|CC_MUXX_BUS:CC_MUXX_REG_A
+ 27. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_MUXX_BUS:CC_MUXX_REG_A"
+ 28. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_MUXX:CC_MUXX_BusB"
+ 29. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_MUXX:CC_MUXX_BusA"
+ 30. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_B"
+ 31. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_A"
+ 32. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_C"
+ 33. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_CLEAR"
+ 34. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_IR"
+ 35. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_PC"
+ 36. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_RS"
+ 37. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R3"
+ 38. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R2"
+ 39. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R1"
+ 40. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R0"
+ 41. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0"
+ 42. Post-Synthesis Netlist Statistics for Top Partition
+ 43. Elapsed Time Per Partition
+ 44. Analysis & Synthesis Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2017  Intel Corporation. All rights reserved.
+Copyright (C) 2018  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -62,20 +64,19 @@ functions, and any output files from any of the foregoing
 associated documentation or information are expressly subject 
 to the terms and conditions of the Intel Program License 
 Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel MegaCore Function License Agreement, or other 
-applicable license agreement, including, without limitation, 
-that your use is for the sole purpose of programming logic 
-devices manufactured by Intel and sold by Intel or its 
-authorized distributors.  Please refer to the applicable 
-agreement for further details.
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
 
 
 
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Oct 11 08:46:12 2019       ;
-; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Tue Oct 15 20:01:03 2019       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; BB_SYSTEM                                   ;
 ; Top-level Entity Name              ; BB_SYSTEM                                   ;
 ; Family                             ; Cyclone IV E                                ;
@@ -91,91 +92,91 @@ agreement for further details.
 +------------------------------------+---------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                        ;
-+----------------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                                     ; Setting            ; Default Value      ;
-+----------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                     ; EP4CE22F17C6       ;                    ;
-; Top-level entity name                                                      ; BB_SYSTEM          ; BB_SYSTEM          ;
-; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
-; Maximum processors allowed for parallel compilation                        ; 4                  ;                    ;
-; Use smart compilation                                                      ; Off                ; Off                ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
-; Enable compact report table                                                ; Off                ; Off                ;
-; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
-; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
-; Preserve fewer node names                                                  ; On                 ; On                 ;
-; OpenCore Plus hardware evaluation                                          ; Enable             ; Enable             ;
-; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
-; State Machine Processing                                                   ; Auto               ; Auto               ;
-; Safe State Machine                                                         ; Off                ; Off                ;
-; Extract Verilog State Machines                                             ; On                 ; On                 ;
-; Extract VHDL State Machines                                                ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
-; Parallel Synthesis                                                         ; On                 ; On                 ;
-; DSP Block Balancing                                                        ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                                         ; On                 ; On                 ;
-; Power-Up Don't Care                                                        ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
-; Remove Duplicate Registers                                                 ; On                 ; On                 ;
-; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
-; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
-; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
-; Optimization Technique                                                     ; Balanced           ; Balanced           ;
-; Carry Chain Length                                                         ; 70                 ; 70                 ;
-; Auto Carry Chains                                                          ; On                 ; On                 ;
-; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
-; Auto ROM Replacement                                                       ; On                 ; On                 ;
-; Auto RAM Replacement                                                       ; On                 ; On                 ;
-; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
-; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
-; Strict RAM Replacement                                                     ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
-; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
-; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
-; Auto Resource Sharing                                                      ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
-; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
-; Report Parameter Settings                                                  ; On                 ; On                 ;
-; Report Source Assignments                                                  ; On                 ; On                 ;
-; Report Connectivity Checks                                                 ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
-; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
-; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
-; HDL message level                                                          ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
-; Clock MUX Protection                                                       ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
-; Block Design Naming                                                        ; Auto               ; Auto               ;
-; SDC constraint protection                                                  ; Off                ; Off                ;
-; Synthesis Effort                                                           ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
-+----------------------------------------------------------------------------+--------------------+--------------------+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE22F17C6       ;                    ;
+; Top-level entity name                                            ; BB_SYSTEM          ; BB_SYSTEM          ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation              ; 4                  ;                    ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
 
 
 +------------------------------------------+
@@ -194,18 +195,19 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                       ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                         ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------+---------+
-; rtl/uDATAPATH.v                  ; yes             ; User Verilog HDL File  ; C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v     ;         ;
-; rtl/SC_RegGENERAL.v              ; yes             ; User Verilog HDL File  ; C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/SC_RegGENERAL.v ;         ;
-; rtl/CC_MUXX.v                    ; yes             ; User Verilog HDL File  ; C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/CC_MUXX.v       ;         ;
-; rtl/CC_DECODER.v                 ; yes             ; User Verilog HDL File  ; C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/CC_DECODER.v    ;         ;
-; rtl/CC_ALU.v                     ; yes             ; User Verilog HDL File  ; C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/CC_ALU.v        ;         ;
-; BB_SYSTEM.v                      ; yes             ; User Verilog HDL File  ; C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v         ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                            ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
+; rtl/uDATAPATH.v                  ; yes             ; User Verilog HDL File  ; C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v     ;         ;
+; rtl/SC_RegGENERAL.v              ; yes             ; User Verilog HDL File  ; C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/SC_RegGENERAL.v ;         ;
+; rtl/CC_MUXX.v                    ; yes             ; User Verilog HDL File  ; C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/CC_MUXX.v       ;         ;
+; rtl/CC_DECODER.v                 ; yes             ; User Verilog HDL File  ; C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/CC_DECODER.v    ;         ;
+; rtl/CC_ALU.v                     ; yes             ; User Verilog HDL File  ; C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/CC_ALU.v        ;         ;
+; BB_SYSTEM.v                      ; yes             ; User Verilog HDL File  ; C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v         ;         ;
+; rtl/CC_MUXX_BUS.v                ; yes             ; User Verilog HDL File  ; C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/CC_MUXX_BUS.v   ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------------------------------+
@@ -249,20 +251,20 @@ agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                         ;
-+-------------------------------------------------------------------+----------------------------------------+
-; Register name                                                     ; Reason for Removal                     ;
-+-------------------------------------------------------------------+----------------------------------------+
-; uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_IR|RegGENERAL_Register[0] ; Lost fanout                            ;
-; uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_PC|RegGENERAL_Register[0] ; Lost fanout                            ;
-; uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_RS|RegGENERAL_Register[0] ; Lost fanout                            ;
-; uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R3|RegGENERAL_Register[0] ; Lost fanout                            ;
-; uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R2|RegGENERAL_Register[0] ; Lost fanout                            ;
-; uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R1|RegGENERAL_Register[0] ; Lost fanout                            ;
-; uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R0|RegGENERAL_Register[0] ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 7                             ;                                        ;
-+-------------------------------------------------------------------+----------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                             ;
++-----------------------------------------------------------------------+----------------------------------------+
+; Register name                                                         ; Reason for Removal                     ;
++-----------------------------------------------------------------------+----------------------------------------+
+; uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_IR|RegGENERAL_Register[0..31] ; Lost fanout                            ;
+; uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_PC|RegGENERAL_Register[0]     ; Lost fanout                            ;
+; uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_RS|RegGENERAL_Register[0]     ; Lost fanout                            ;
+; uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R3|RegGENERAL_Register[0]     ; Lost fanout                            ;
+; uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R2|RegGENERAL_Register[0]     ; Lost fanout                            ;
+; uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R1|RegGENERAL_Register[0]     ; Lost fanout                            ;
+; uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R0|RegGENERAL_Register[0]     ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 38                                ;                                        ;
++-----------------------------------------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -309,6 +311,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; DATAWIDTH_MUX_SELECTION     ; 3        ; Signed Integer             ;
 ; DATA_REGFIXED_INIT_0        ; 00001001 ; Unsigned Binary            ;
 ; DATA_REGFIXED_INIT_1        ; 00001111 ; Unsigned Binary            ;
+; DATA_BUS_CONTROL            ; 6        ; Signed Integer             ;
 +-----------------------------+----------+----------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -460,6 +463,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|CC_MUXX_BUS:CC_MUXX_REG_A ;
++---------------------------------+-------+-----------------------------------------------------+
+; Parameter Name                  ; Value ; Type                                                ;
++---------------------------------+-------+-----------------------------------------------------+
+; DATAWIDTH_MUX_SELECTION_REG     ; 5     ; Signed Integer                                      ;
+; DATAWIDTH_MUX_SELECTION_CONTROL ; 6     ; Signed Integer                                      ;
+; DATAWIDTH_BUS                   ; 4     ; Signed Integer                                      ;
++---------------------------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_MUXX_BUS:CC_MUXX_REG_A"                                                                                                                           ;
++----------------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                 ; Type  ; Severity ; Details                                                                                                                                                      ;
++----------------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; CC_MUX_control_InBUS ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (6 bits) it drives.  Extra input bit(s) "CC_MUX_control_InBUS[5..1]" will be connected to GND. ;
++----------------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_MUXX:CC_MUXX_BusB"                                                                                                                                                       ;
 +------------------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -488,7 +512,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; CC_MUX_data3_InBUS     ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "CC_MUX_data3_InBUS[31..1]" will be connected to GND.                      ;
 ; CC_MUX_data4_InBUS     ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "CC_MUX_data4_InBUS[31..1]" will be connected to GND.                      ;
 ; CC_MUX_data5_InBUS     ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "CC_MUX_data5_InBUS[31..1]" will be connected to GND.                      ;
-; CC_MUX_data6_InBUS     ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "CC_MUX_data6_InBUS[31..1]" will be connected to GND.                      ;
 ; CC_MUX_data7_InBUS     ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "CC_MUX_data7_InBUS[31..1]" will be connected to GND.                      ;
 ; CC_MUX_selection_InBUS ; Input ; Warning  ; Input port expression (12 bits) is wider than the input port (3 bits) it drives.  The 9 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
 +------------------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -535,7 +558,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port                        ; Type   ; Severity ; Details                                                                                                                                          ;
 +-----------------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; SC_RegGENERAL_data_OutBUS_A ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "SC_RegGENERAL_data_OutBUS_A[31..1]" have no fanouts ;
 ; SC_RegGENERAL_data_OutBUS_B ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "SC_RegGENERAL_data_OutBUS_B[31..1]" have no fanouts ;
 +-----------------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
 
@@ -609,9 +631,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; uDATAPATH_carry_OutLow    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                              ;
 ; uDATAPATH_negative_OutLow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                              ;
 ; uDATAPATH_zero_OutLow     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                              ;
-; uDATAPATH_DECODERA_InBUS  ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "uDATAPATH_DECODERA_InBUS[3..3]" will be connected to GND. ;
 ; uDATAPATH_DECODERB_InBUS  ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "uDATAPATH_DECODERB_InBUS[3..3]" will be connected to GND. ;
 ; uDATAPATH_DECODERC_InBUS  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                     ;
+; uDATAPATH_BUS_CONTROL_A   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                     ;
+; uDATAPATH_BUS_CONTROL_B   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                     ;
+; uDATAPATH_BUS_CONTROL_C   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                     ;
+; uDATAPATH_BUS_SELECTOR_A  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                     ;
+; uDATAPATH_BUS_SELECTOR_B  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                     ;
+; uDATAPATH_BUS_SELECTOR_C  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                     ;
 +---------------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -635,7 +662,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:16     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -644,98 +671,101 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Oct 11 08:45:06 2019
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Tue Oct 15 20:00:43 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off BB_SYSTEM -c BB_SYSTEM
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Warning (20031): Parallel compilation is enabled for 4 processors, but there are only 2 processors in the system. Runtime may increase due to over usage of the processor space.
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/udatapath.v
-    Info (12023): Found entity 1: uDATAPATH File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 21
+    Info (12023): Found entity 1: uDATAPATH File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/sc_statemachine.v
-    Info (12023): Found entity 1: SC_STATEMACHINE File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/SC_STATEMACHINE.v Line: 21
+    Info (12023): Found entity 1: SC_STATEMACHINE File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/SC_STATEMACHINE.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/sc_regshifter.v
-    Info (12023): Found entity 1: SC_RegSHIFTER File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/SC_RegSHIFTER.v Line: 21
+    Info (12023): Found entity 1: SC_RegSHIFTER File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/SC_RegSHIFTER.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/sc_reggeneral.v
-    Info (12023): Found entity 1: SC_RegGENERAL File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/SC_RegGENERAL.v Line: 21
+    Info (12023): Found entity 1: SC_RegGENERAL File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/SC_RegGENERAL.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/sc_regfixed.v
-    Info (12023): Found entity 1: SC_RegFIXED File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/SC_RegFIXED.v Line: 21
+    Info (12023): Found entity 1: SC_RegFIXED File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/SC_RegFIXED.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/cc_muxx.v
-    Info (12023): Found entity 1: CC_MUXX File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/CC_MUXX.v Line: 21
+    Info (12023): Found entity 1: CC_MUXX File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/CC_MUXX.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/cc_decoder.v
-    Info (12023): Found entity 1: CC_DECODER File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/CC_DECODER.v Line: 21
+    Info (12023): Found entity 1: CC_DECODER File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/CC_DECODER.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/cc_alu.v
-    Info (12023): Found entity 1: CC_ALU File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/CC_ALU.v Line: 21
+    Info (12023): Found entity 1: CC_ALU File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/CC_ALU.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file bb_system.v
-    Info (12023): Found entity 1: BB_SYSTEM File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 21
-Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(98): created implicit net for "RegGENERAL_2_MUX_data0_wireBUS_A" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 98
-Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(99): created implicit net for "RegGENERAL_2_MUX_data0_wireBUS_B" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 99
-Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(108): created implicit net for "RegGENERAL_2_MUX_data1_wireBUS_A" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 108
-Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(109): created implicit net for "RegGENERAL_2_MUX_data1_wireBUS_B" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 109
-Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(118): created implicit net for "RegGENERAL_2_MUX_data2_wireBUS_A" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 118
-Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(119): created implicit net for "RegGENERAL_2_MUX_data2_wireBUS_B" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 119
-Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(128): created implicit net for "RegGENERAL_2_MUX_data3_wireBUS_A" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 128
-Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(129): created implicit net for "RegGENERAL_2_MUX_data3_wireBUS_B" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 129
-Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(138): created implicit net for "RegGENERAL_2_MUX_dataRS_wireBUS_A" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 138
-Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(139): created implicit net for "RegGENERAL_2_MUX_dataRS_wireBUS_B" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 139
-Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(148): created implicit net for "RegGENERAL_2_MUX_dataPC_wireBUS_A" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 148
-Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(149): created implicit net for "RegGENERAL_2_MUX_dataPC_wireBUS_B" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 149
-Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(158): created implicit net for "RegGENERAL_2_MUX_dataIR_wireBUS_A" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 158
-Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(159): created implicit net for "RegGENERAL_2_MUX_dataIR_wireBUS_B" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 159
+    Info (12023): Found entity 1: BB_SYSTEM File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/cc_muxx_bus.v
+    Info (12023): Found entity 1: CC_MUXX_BUS File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/CC_MUXX_BUS.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(117): created implicit net for "RegGENERAL_2_MUX_data0_wireBUS_A" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 117
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(118): created implicit net for "RegGENERAL_2_MUX_data0_wireBUS_B" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 118
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(127): created implicit net for "RegGENERAL_2_MUX_data1_wireBUS_A" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 127
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(128): created implicit net for "RegGENERAL_2_MUX_data1_wireBUS_B" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 128
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(137): created implicit net for "RegGENERAL_2_MUX_data2_wireBUS_A" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 137
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(138): created implicit net for "RegGENERAL_2_MUX_data2_wireBUS_B" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 138
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(147): created implicit net for "RegGENERAL_2_MUX_data3_wireBUS_A" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 147
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(148): created implicit net for "RegGENERAL_2_MUX_data3_wireBUS_B" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 148
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(157): created implicit net for "RegGENERAL_2_MUX_dataRS_wireBUS_A" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 157
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(158): created implicit net for "RegGENERAL_2_MUX_dataRS_wireBUS_B" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 158
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(167): created implicit net for "RegGENERAL_2_MUX_dataPC_wireBUS_A" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 167
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(168): created implicit net for "RegGENERAL_2_MUX_dataPC_wireBUS_B" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 168
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(178): created implicit net for "RegGENERAL_2_MUX_dataIR_wireBUS_B" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 178
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(296): created implicit net for "uDATAPATH__BUS_CONTROL_A" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 296
 Info (12127): Elaborating entity "BB_SYSTEM" for the top level hierarchy
-Info (12128): Elaborating entity "uDATAPATH" for hierarchy "uDATAPATH:uDATAPATH_u0" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 96
-Info (12128): Elaborating entity "SC_RegGENERAL" for hierarchy "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R0" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 105
-Info (12128): Elaborating entity "CC_DECODER" for hierarchy "uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_CLEAR" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 203
-Info (12128): Elaborating entity "CC_MUXX" for hierarchy "uDATAPATH:uDATAPATH_u0|CC_MUXX:CC_MUXX_BusA" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 242
-Info (12128): Elaborating entity "CC_ALU" for hierarchy "uDATAPATH:uDATAPATH_u0|CC_ALU:CC_ALU_u0" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/uDATAPATH.v Line: 272
-Warning (10036): Verilog HDL or VHDL warning at CC_ALU.v(52): object "addition0" assigned a value but never read File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/CC_ALU.v Line: 52
-Warning (10036): Verilog HDL or VHDL warning at CC_ALU.v(53): object "addition1" assigned a value but never read File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/rtl/CC_ALU.v Line: 53
-Warning (12241): 10 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12128): Elaborating entity "uDATAPATH" for hierarchy "uDATAPATH:uDATAPATH_u0" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 96
+Info (12128): Elaborating entity "SC_RegGENERAL" for hierarchy "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R0" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 124
+Info (12128): Elaborating entity "CC_DECODER" for hierarchy "uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_CLEAR" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 222
+Info (12128): Elaborating entity "CC_MUXX" for hierarchy "uDATAPATH:uDATAPATH_u0|CC_MUXX:CC_MUXX_BusA" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 261
+Info (12128): Elaborating entity "CC_ALU" for hierarchy "uDATAPATH:uDATAPATH_u0|CC_ALU:CC_ALU_u0" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 291
+Warning (10036): Verilog HDL or VHDL warning at CC_ALU.v(52): object "addition0" assigned a value but never read File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/CC_ALU.v Line: 52
+Warning (10036): Verilog HDL or VHDL warning at CC_ALU.v(53): object "addition1" assigned a value but never read File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/CC_ALU.v Line: 53
+Info (12128): Elaborating entity "CC_MUXX_BUS" for hierarchy "uDATAPATH:uDATAPATH_u0|CC_MUXX_BUS:CC_MUXX_REG_A" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 299
+Warning (12241): 11 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[0]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[1]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[2]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[3]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[4]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[5]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[6]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[7]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[8]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[9]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[10]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[11]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[12]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[13]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[14]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[15]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[16]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[17]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[18]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[19]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[20]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[21]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[22]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[23]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[24]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[25]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[26]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[27]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[28]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[29]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[30]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
-    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[31]" is stuck at GND File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 49
-Info (17049): 6 registers lost all their fanouts during netlist optimizations.
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[0]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[1]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[2]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[3]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[4]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[5]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[6]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[7]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[8]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[9]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[10]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[11]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[12]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[13]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[14]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[15]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[16]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[17]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[18]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[19]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[20]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[21]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[22]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[23]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[24]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[25]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[26]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[27]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[28]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[29]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[30]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
+    Warning (13410): Pin "BB_SYSTEM_data_OutBUS[31]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
+Info (17049): 37 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "BB_SYSTEM_CLOCK_50" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 50
-    Warning (15610): No output dependent on input pin "BB_SYSTEM_RESET_InHigh" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Registros/BB_SYSTEM.v Line: 51
+    Warning (15610): No output dependent on input pin "BB_SYSTEM_CLOCK_50" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 50
+    Warning (15610): No output dependent on input pin "BB_SYSTEM_RESET_InHigh" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 51
 Info (21057): Implemented 34 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 32 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 54 warnings
-    Info: Peak virtual memory: 4749 megabytes
-    Info: Processing ended: Fri Oct 11 08:46:13 2019
-    Info: Elapsed time: 00:01:07
-    Info: Total CPU time (on all processors): 00:00:51
+    Info: Peak virtual memory: 4725 megabytes
+    Info: Processing ended: Tue Oct 15 20:01:03 2019
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:42
 
 
