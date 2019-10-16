@@ -1,5 +1,5 @@
 Analysis & Synthesis report for BB_SYSTEM
-Tue Oct 15 20:01:03 2019
+Wed Oct 16 09:18:37 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -32,24 +32,25 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  24. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|CC_MUXX:CC_MUXX_BusB
  25. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|CC_ALU:CC_ALU_u0
  26. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|CC_MUXX_BUS:CC_MUXX_REG_A
- 27. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_MUXX_BUS:CC_MUXX_REG_A"
- 28. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_MUXX:CC_MUXX_BusB"
- 29. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_MUXX:CC_MUXX_BusA"
- 30. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_B"
- 31. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_A"
- 32. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_C"
- 33. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_CLEAR"
- 34. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_IR"
- 35. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_PC"
- 36. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_RS"
- 37. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R3"
- 38. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R2"
- 39. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R1"
- 40. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R0"
- 41. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0"
- 42. Post-Synthesis Netlist Statistics for Top Partition
- 43. Elapsed Time Per Partition
- 44. Analysis & Synthesis Messages
+ 27. Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|CC_MUXX_BUS:CC_MUXX_REG_B
+ 28. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_MUXX_BUS:CC_MUXX_REG_B"
+ 29. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_MUXX_BUS:CC_MUXX_REG_A"
+ 30. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_MUXX:CC_MUXX_BusB"
+ 31. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_MUXX:CC_MUXX_BusA"
+ 32. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_B"
+ 33. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_A"
+ 34. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_C"
+ 35. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_CLEAR"
+ 36. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_PC"
+ 37. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_RS"
+ 38. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R3"
+ 39. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R2"
+ 40. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R1"
+ 41. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R0"
+ 42. Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0"
+ 43. Post-Synthesis Netlist Statistics for Top Partition
+ 44. Elapsed Time Per Partition
+ 45. Analysis & Synthesis Messages
 
 
 
@@ -75,7 +76,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Oct 15 20:01:03 2019       ;
+; Analysis & Synthesis Status        ; Successful - Wed Oct 16 09:18:37 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; BB_SYSTEM                                   ;
 ; Top-level Entity Name              ; BB_SYSTEM                                   ;
@@ -475,6 +476,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uDATAPATH:uDATAPATH_u0|CC_MUXX_BUS:CC_MUXX_REG_B ;
++---------------------------------+-------+-----------------------------------------------------+
+; Parameter Name                  ; Value ; Type                                                ;
++---------------------------------+-------+-----------------------------------------------------+
+; DATAWIDTH_MUX_SELECTION_REG     ; 5     ; Signed Integer                                      ;
+; DATAWIDTH_MUX_SELECTION_CONTROL ; 6     ; Signed Integer                                      ;
+; DATAWIDTH_BUS                   ; 4     ; Signed Integer                                      ;
++---------------------------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_MUXX_BUS:CC_MUXX_REG_B"                                                                                                                           ;
++----------------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                 ; Type  ; Severity ; Details                                                                                                                                                      ;
++----------------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; CC_MUX_control_InBUS ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (6 bits) it drives.  Extra input bit(s) "CC_MUX_control_InBUS[5..1]" will be connected to GND. ;
++----------------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|CC_MUXX_BUS:CC_MUXX_REG_A"                                                                                                                           ;
 +----------------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -495,7 +517,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; CC_MUX_data3_InBUS     ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "CC_MUX_data3_InBUS[31..1]" will be connected to GND.                      ;
 ; CC_MUX_data4_InBUS     ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "CC_MUX_data4_InBUS[31..1]" will be connected to GND.                      ;
 ; CC_MUX_data5_InBUS     ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "CC_MUX_data5_InBUS[31..1]" will be connected to GND.                      ;
-; CC_MUX_data6_InBUS     ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "CC_MUX_data6_InBUS[31..1]" will be connected to GND.                      ;
 ; CC_MUX_data7_InBUS     ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "CC_MUX_data7_InBUS[31..1]" will be connected to GND.                      ;
 ; CC_MUX_selection_InBUS ; Input ; Warning  ; Input port expression (12 bits) is wider than the input port (3 bits) it drives.  The 9 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
 +------------------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -551,15 +572,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------------------------------+--------+----------+-------------------------------------------------------------------------------------+
 ; CC_DECODER_datadecoder_OutBUS[11..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_IR"                                                                                                                             ;
-+-----------------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port                        ; Type   ; Severity ; Details                                                                                                                                          ;
-+-----------------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; SC_RegGENERAL_data_OutBUS_B ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "SC_RegGENERAL_data_OutBUS_B[31..1]" have no fanouts ;
-+-----------------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -622,24 +634,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0"                                                                                                                                                               ;
-+---------------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port                      ; Type   ; Severity ; Details                                                                                                                                                          ;
-+---------------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; uDATAPATH_overflow_OutLow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                              ;
-; uDATAPATH_carry_OutLow    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                              ;
-; uDATAPATH_negative_OutLow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                              ;
-; uDATAPATH_zero_OutLow     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                              ;
-; uDATAPATH_DECODERB_InBUS  ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "uDATAPATH_DECODERB_InBUS[3..3]" will be connected to GND. ;
-; uDATAPATH_DECODERC_InBUS  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                     ;
-; uDATAPATH_BUS_CONTROL_A   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                     ;
-; uDATAPATH_BUS_CONTROL_B   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                     ;
-; uDATAPATH_BUS_CONTROL_C   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                     ;
-; uDATAPATH_BUS_SELECTOR_A  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                     ;
-; uDATAPATH_BUS_SELECTOR_B  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                     ;
-; uDATAPATH_BUS_SELECTOR_C  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                     ;
-+---------------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uDATAPATH:uDATAPATH_u0"                                                                                                                                           ;
++---------------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                      ; Type   ; Severity ; Details                                                                                                                                      ;
++---------------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; uDATAPATH_overflow_OutLow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; uDATAPATH_carry_OutLow    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; uDATAPATH_negative_OutLow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; uDATAPATH_zero_OutLow     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; uDATAPATH_BUS_CONTROL_A   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; uDATAPATH_BUS_CONTROL_B   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; uDATAPATH_BUS_CONTROL_C   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; uDATAPATH_BUS_SELECTOR_A  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; uDATAPATH_BUS_SELECTOR_B  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; uDATAPATH_BUS_SELECTOR_C  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++---------------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -662,7 +672,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -672,7 +682,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Oct 15 20:00:43 2019
+    Info: Processing started: Wed Oct 16 09:18:12 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off BB_SYSTEM -c BB_SYSTEM
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Warning (20031): Parallel compilation is enabled for 4 processors, but there are only 2 processors in the system. Runtime may increase due to over usage of the processor space.
@@ -696,29 +706,29 @@ Info (12021): Found 1 design units, including 1 entities, in source file bb_syst
     Info (12023): Found entity 1: BB_SYSTEM File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/cc_muxx_bus.v
     Info (12023): Found entity 1: CC_MUXX_BUS File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/CC_MUXX_BUS.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(117): created implicit net for "RegGENERAL_2_MUX_data0_wireBUS_A" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 117
-Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(118): created implicit net for "RegGENERAL_2_MUX_data0_wireBUS_B" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 118
-Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(127): created implicit net for "RegGENERAL_2_MUX_data1_wireBUS_A" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 127
-Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(128): created implicit net for "RegGENERAL_2_MUX_data1_wireBUS_B" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 128
-Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(137): created implicit net for "RegGENERAL_2_MUX_data2_wireBUS_A" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 137
-Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(138): created implicit net for "RegGENERAL_2_MUX_data2_wireBUS_B" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 138
-Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(147): created implicit net for "RegGENERAL_2_MUX_data3_wireBUS_A" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 147
-Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(148): created implicit net for "RegGENERAL_2_MUX_data3_wireBUS_B" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 148
-Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(157): created implicit net for "RegGENERAL_2_MUX_dataRS_wireBUS_A" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 157
-Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(158): created implicit net for "RegGENERAL_2_MUX_dataRS_wireBUS_B" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 158
-Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(167): created implicit net for "RegGENERAL_2_MUX_dataPC_wireBUS_A" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 167
-Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(168): created implicit net for "RegGENERAL_2_MUX_dataPC_wireBUS_B" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 168
-Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(178): created implicit net for "RegGENERAL_2_MUX_dataIR_wireBUS_B" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 178
-Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(296): created implicit net for "uDATAPATH__BUS_CONTROL_A" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 296
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(121): created implicit net for "RegGENERAL_2_MUX_data0_wireBUS_A" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 121
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(122): created implicit net for "RegGENERAL_2_MUX_data0_wireBUS_B" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 122
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(131): created implicit net for "RegGENERAL_2_MUX_data1_wireBUS_A" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 131
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(132): created implicit net for "RegGENERAL_2_MUX_data1_wireBUS_B" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 132
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(141): created implicit net for "RegGENERAL_2_MUX_data2_wireBUS_A" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 141
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(142): created implicit net for "RegGENERAL_2_MUX_data2_wireBUS_B" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 142
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(151): created implicit net for "RegGENERAL_2_MUX_data3_wireBUS_A" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 151
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(152): created implicit net for "RegGENERAL_2_MUX_data3_wireBUS_B" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 152
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(161): created implicit net for "RegGENERAL_2_MUX_dataRS_wireBUS_A" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 161
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(162): created implicit net for "RegGENERAL_2_MUX_dataRS_wireBUS_B" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 162
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(171): created implicit net for "RegGENERAL_2_MUX_dataPC_wireBUS_A" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 171
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(172): created implicit net for "RegGENERAL_2_MUX_dataPC_wireBUS_B" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 172
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(300): created implicit net for "uDATAPATH__BUS_CONTROL_A" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 300
+Warning (10236): Verilog HDL Implicit Net warning at uDATAPATH.v(307): created implicit net for "uDATAPATH__BUS_CONTROL_B" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 307
 Info (12127): Elaborating entity "BB_SYSTEM" for the top level hierarchy
 Info (12128): Elaborating entity "uDATAPATH" for hierarchy "uDATAPATH:uDATAPATH_u0" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 96
-Info (12128): Elaborating entity "SC_RegGENERAL" for hierarchy "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R0" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 124
-Info (12128): Elaborating entity "CC_DECODER" for hierarchy "uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_CLEAR" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 222
-Info (12128): Elaborating entity "CC_MUXX" for hierarchy "uDATAPATH:uDATAPATH_u0|CC_MUXX:CC_MUXX_BusA" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 261
-Info (12128): Elaborating entity "CC_ALU" for hierarchy "uDATAPATH:uDATAPATH_u0|CC_ALU:CC_ALU_u0" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 291
+Info (12128): Elaborating entity "SC_RegGENERAL" for hierarchy "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R0" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 128
+Info (12128): Elaborating entity "CC_DECODER" for hierarchy "uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_CLEAR" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 226
+Info (12128): Elaborating entity "CC_MUXX" for hierarchy "uDATAPATH:uDATAPATH_u0|CC_MUXX:CC_MUXX_BusA" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 265
+Info (12128): Elaborating entity "CC_ALU" for hierarchy "uDATAPATH:uDATAPATH_u0|CC_ALU:CC_ALU_u0" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 295
 Warning (10036): Verilog HDL or VHDL warning at CC_ALU.v(52): object "addition0" assigned a value but never read File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/CC_ALU.v Line: 52
 Warning (10036): Verilog HDL or VHDL warning at CC_ALU.v(53): object "addition1" assigned a value but never read File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/CC_ALU.v Line: 53
-Info (12128): Elaborating entity "CC_MUXX_BUS" for hierarchy "uDATAPATH:uDATAPATH_u0|CC_MUXX_BUS:CC_MUXX_REG_A" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 299
+Info (12128): Elaborating entity "CC_MUXX_BUS" for hierarchy "uDATAPATH:uDATAPATH_u0|CC_MUXX_BUS:CC_MUXX_REG_A" File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/rtl/uDATAPATH.v Line: 303
 Warning (12241): 11 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "BB_SYSTEM_data_OutBUS[0]" is stuck at GND File: C:/Users/User/Documents/U/8/arquitectura/Arqui-master/BB_SYSTEM.v Line: 49
@@ -763,9 +773,9 @@ Info (21057): Implemented 34 device resources after synthesis - the final resour
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 32 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 54 warnings
-    Info: Peak virtual memory: 4725 megabytes
-    Info: Processing ended: Tue Oct 15 20:01:03 2019
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:42
+    Info: Peak virtual memory: 4726 megabytes
+    Info: Processing ended: Wed Oct 16 09:18:37 2019
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:48
 
 
