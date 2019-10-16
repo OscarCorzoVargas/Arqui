@@ -18,7 +18,7 @@
 //=======================================================
 //  MODULE Definition
 //=======================================================
-module uDATAPATH #(parameter DATAWIDTH_BUS=32, parameter DATAWIDTH_DECODER_SELECTION=4, parameter DATAWIDTH_DECODER_OUT=12, parameter DATAWIDTH_ALU_SELECTION=4, parameter DATAWIDTH_MUX_SELECTION=4, parameter DATA_REGFIXED_INIT_0=8'b00001001, parameter DATA_REGFIXED_INIT_1=8'b00001111)(
+module uDATAPATH #(parameter DATAWIDTH_BUS=32, parameter DATAWIDTH_DECODER_SELECTION=4, parameter DATAWIDTH_DECODER_OUT=12, parameter DATAWIDTH_ALU_SELECTION=4, parameter DATAWIDTH_MUX_SELECTION=4, parameter DATA_REGFIXED_INIT_0=8'b00001001, parameter DATA_REGFIXED_INIT_1=8'b00001111, parameter DATA_BUS_CONTROL=6)(
 	//////////// OUTPUTS //////////
 	uDATAPATH_data_OutBUS,
 	uDATAPATH_overflow_OutLow,
@@ -30,13 +30,19 @@ module uDATAPATH #(parameter DATAWIDTH_BUS=32, parameter DATAWIDTH_DECODER_SELEC
 	uDATAPATH_RESET_InHigh,
 	uDATAPATH_decoderclearselection_InBUS,
 	uDATAPATH_decoderloadselection_InBUS,
-	uDATAPATH_DECODERA_InBUS,
+//	uDATAPATH_DECODERA_InBUS,
 	uDATAPATH_DECODERB_InBUS,
 	uDATAPATH_DECODERC_InBUS,
 	uDATAPATH_aluselection_InBUS,
 	uDATAPATH_regSHIFTERclear_InLow,
 	uDATAPATH_regSHIFTERload_InLow,
-	uDATAPATH_regSHIFTERshiftselection_InLow
+	uDATAPATH_regSHIFTERshiftselection_InLow,
+	uDATAPATH_BUS_CONTROL_A,
+	uDATAPATH_BUS_CONTROL_B,
+	uDATAPATH_BUS_CONTROL_C,
+	uDATAPATH_BUS_SELECTOR_A,
+	uDATAPATH_BUS_SELECTOR_B,
+	uDATAPATH_BUS_SELECTOR_C
 );
 //=======================================================
 //  PARAMETER declarations
@@ -55,15 +61,21 @@ input 	uDATAPATH_CLOCK_50;
 input 	uDATAPATH_RESET_InHigh;
 input 	[DATAWIDTH_DECODER_SELECTION-1:0]	uDATAPATH_decoderclearselection_InBUS;
 input 	[DATAWIDTH_DECODER_SELECTION-1:0]	uDATAPATH_decoderloadselection_InBUS;
-input 	[DATAWIDTH_DECODER_SELECTION-1:0]	uDATAPATH_DECODERA_InBUS;
+//input 	[DATAWIDTH_DECODER_SELECTION-1:0]	uDATAPATH_DECODERA_InBUS;
 input 	[DATAWIDTH_DECODER_SELECTION-1:0]	uDATAPATH_DECODERB_InBUS;
 input 	[DATAWIDTH_DECODER_SELECTION-1:0]	uDATAPATH_DECODERC_InBUS;
 //input 	[DATAWIDTH_MUX_SELECTION-1:0]	uDATAPATH_muxselectionBUSA_InBUS;
 //input 	[DATAWIDTH_MUX_SELECTION-1:0]	uDATAPATH_muxselectionBUSB_InBUS;
 input 	[DATAWIDTH_ALU_SELECTION-1:0]	uDATAPATH_aluselection_InBUS;
-input	uDATAPATH_regSHIFTERclear_InLow;
+input		uDATAPATH_regSHIFTERclear_InLow;
 input 	uDATAPATH_regSHIFTERload_InLow;
 input 	[1:0] uDATAPATH_regSHIFTERshiftselection_InLow;
+input 	[DATA_BUS_CONTROL-1:0] uDATAPATH_BUS_CONTROL_A;
+input	 	[DATA_BUS_CONTROL-1:0] uDATAPATH_BUS_CONTROL_B;
+input 	[DATA_BUS_CONTROL-1:0] uDATAPATH_BUS_CONTROL_C;
+input 	uDATAPATH_BUS_SELECTOR_A;
+input 	uDATAPATH_BUS_SELECTOR_B;
+input 	uDATAPATH_BUS_SELECTOR_C;
 //=======================================================
 //  REG/WIRE declarations
 //=======================================================
@@ -86,7 +98,14 @@ wire [DATAWIDTH_DECODER_OUT-1:0] DECODER_2_RegGENERAL_decoderclearselection_wire
 wire [DATAWIDTH_DECODER_OUT-1:0] DECODER_2_RegGENERAL_decoderloadselection_wireBUS;
 wire [DATAWIDTH_DECODER_OUT-1:0] DECODER_A;
 wire [DATAWIDTH_DECODER_OUT-1:0] DECODER_B;
-
+wire [DATA_BUS_CONTROL-1:0] CONTROL_C;
+wire [DATA_BUS_CONTROL-1:0] CONTROL_B;
+wire [DATA_BUS_CONTROL-1:0] CONTROL_A;
+wire [DATA_BUS_CONTROL-2:0] IR_A;
+wire [DATA_BUS_CONTROL-2:0] IR_B;
+wire [DATA_BUS_CONTROL-2:0] IR_C;
+wire [DATAWIDTH_BUS-1:0]RegGENERAL_2_MUX_dataIR_wireBUS_A;
+wire [DATAWIDTH_DECODER_SELECTION-1:0]	uDATAPATH_DECODERA_InBUS;
 	//=======================================================
 //  Structural coding
 //=======================================================
@@ -272,6 +291,11 @@ CC_ALU #(.DATAWIDTH_BUS(DATAWIDTH_BUS), .DATAWIDTH_ALU_SELECTION(DATAWIDTH_ALU_S
 );
 //-------------------------------------------------------
 //assign uDATAPATH_data_OutBUS = RegGENERAL_2_MUX_data3_wireBUS_A;
+CC_MUXX_BUS #(.DATAWIDTH_MUX_SELECTION_REG(5), .DATAWIDTH_MUX_SELECTION_CONTROL(6), .DATAWIDTH_BUS(4)) CC_MUXX_REG_A(
+	.CC_MUX_registro_InBUS(RegGENERAL_2_MUX_dataIR_wireBUS_A[18:14]),
+	.CC_MUX_control_InBUS(uDATAPATH__BUS_CONTROL_A),
+	.CC_MUX_selector_InBUS(uDATAPATH_BUS_SELECTOR_A),
+	.CC_MUX_data_OutBUS(uDATAPATH_DECODERA_InBUS)
+);
 
 endmodule
-
