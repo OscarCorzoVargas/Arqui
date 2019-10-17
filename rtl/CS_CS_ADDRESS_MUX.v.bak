@@ -1,0 +1,57 @@
+//=======================================================
+//  MODULE Definition
+//=======================================================
+module CS_CS_ADDRESS_MUX(
+	//////////// OUTPUTS //////////
+	CS_CS_ADDRESS_MUX_data_OutBUS,
+	//////////// INPUTS //////////
+	CS_CS_ADDRESS_MUX_data_CSAI,
+	CS_CS_ADDRESS_MUX_data_MIR,
+	CS_CS_ADDRESS_MUX_data_Scratchpad,	
+	CS_CS_ADDRESS_MUX_data_Uno,	
+	CS_CS_ADDRESS_MUX_data_CeroUno,	
+	CS_CS_ADDRESS_MUX_data_CeroDos,	
+	CS_CS_ADDRESS_MUXX_selection_InBUS
+);
+//=======================================================
+//  PARAMETER declarations
+//=======================================================
+parameter ADDR_LENGTH = 11;
+parameter DECODER_LENGTH = 8;
+parameter SELECTION_LENGTH = 2;
+//=======================================================
+//  PORT declarations
+//=======================================================
+output reg	[ADDR_LENGTH-1:0] CS_CS_ADDRESS_MUX_data_OutBUS;
+input			[ADDR_LENGTH-1:0] CS_CS_ADDRESS_MUX_data_CSAI;
+input			[ADDR_LENGTH-1:0] CS_CS_ADDRESS_MUX_data_MIR;
+input			[DECODER_LENGTH-1:0] CS_CS_ADDRESS_MUX_data_Scratchpad;
+input			 CS_CS_ADDRESS_MUX_data_Uno;	
+input			 CS_CS_ADDRESS_MUX_data_CeroUno;
+input			 CS_CS_ADDRESS_MUX_data_CeroDos;
+input			[SELECTION_LENGTH-1:0] CS_CS_ADDRESS_MUXX_selection_InBUS;
+//=======================================================
+//  REG/WIRE declarations
+//=======================================================
+wire			[ADDR_LENGTH-1:0] ADDRESS_DECODER;
+assign ADDRESS_DECODER = {CS_CS_ADDRESS_MUX_data_Uno, CS_CS_ADDRESS_MUX_data_Scratchpad, CS_CS_ADDRESS_MUX_data_CeroUno, CS_CS_ADDRESS_MUX_data_CeroDos};
+//=======================================================
+//  Structural coding
+//=======================================================
+//INPUT LOGIC: COMBINATIONAL
+always@(*)
+begin
+	case (CC_MUX_selection_InBUS)	
+	// Example to more outputs: WaitStart: begin sResetCounter = 0; sCuenteUP = 0; end
+		2'b00: CS_CS_ADDRESS_MUX_data_OutBUS = CS_CS_ADDRESS_MUX_data_CSAI;
+		2'b01: CS_CS_ADDRESS_MUX_data_OutBUS = CS_CS_ADDRESS_MUX_data_MIR;
+		2'b10: CS_CS_ADDRESS_MUX_data_OutBUS = ADDRESS_DECODER;
+		default :   CS_CS_ADDRESS_MUX_data_OutBUS = CS_CS_ADDRESS_MUX_data_MIR; // channel 0 is selected 
+	endcase
+end
+//=======================================================
+//  Outputs
+//=======================================================
+// OUTPUT LOGIC : COMBINATIONAL
+
+endmodule

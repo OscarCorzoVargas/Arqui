@@ -1,0 +1,61 @@
+//=======================================================
+//  MODULE Definition
+//=======================================================
+module MAIN_MEMORY(
+	//////////// OUTPUTS //////////
+	MAIN_MEMORY_data_OutBUS,
+	MAIN_MEMORY_ACK;
+	//////////// INPUTS //////////
+	MAIN_MEMORY_data_InBUS,
+	MAIN_MEMORY_ADDRESS_data_InBUS,
+	MAIN_MEMORY_RD_data_In,	
+	MAIN_MEMORY_WR_data_In,
+	MAIN_MEMORY_CLOCK_50
+);
+//=======================================================
+//  PARAMETER declarations
+//=======================================================
+parameter DATAWIDTH_BUS = 32;
+//=======================================================
+//  PORT declarations
+//=======================================================
+output reg	[DATAWIDTH_BUS-1:0] MAIN_MEMORY_data_OutBUS;
+output reg	MAIN_MEMORY_ACK
+input			[DATAWIDTH_BUS-1:0] MAIN_MEMORY_data_InBUS;
+input			[DATAWIDTH_BUS-1:0] MAIN_MEMORY_ADDRESS_data_InBUS;
+input			 MAIN_MEMORY_RD_data_In;	
+input			 MAIN_MEMORY_WR_data_In;
+input			 MAIN_MEMORY_CLOCK_50;
+//=======================================================
+//  REG/WIRE declarations
+//=======================================================
+
+//=======================================================
+//  Structural coding
+//=======================================================
+//INPUT LOGIC: COMBINATIONAL
+always@(*)
+begin
+	case (MAIN_MEMORY_ADDRESS_data_InBUS)	
+		4'b0000: MAIN_MEMORY_data_OutBUS = 32'b1000 0010 0001 0000 0010 0000 0000 0000;
+		4'b0001: MAIN_MEMORY_data_OutBUS = 32'b1000 0100 0001 0000 0010 0000 0000 0001;
+		4'b0010: MAIN_MEMORY_data_OutBUS = 32'b1000 0110 0001 0000 0010 0000 0000 0011;
+		4'b0011: MAIN_MEMORY_data_OutBUS = 32'b0001 0000 1000 0000 0000 0000 0000 0001;
+		4'b0100: MAIN_MEMORY_data_OutBUS = 32'b1000 0010 0000 0000 0100 0000 0000 0010;
+		4'b0101: MAIN_MEMORY_data_OutBUS = 32'b1000 0110 0010 0100 1110 0000 0000 0001;
+		4'b0110: MAIN_MEMORY_data_OutBUS = 32'b1000 0010 0001 0000 0010 0000 0000 0000;
+		4'b0111: MAIN_MEMORY_data_OutBUS = 32'b1000 0010 0001 0000 0010 0000 0000 0000;
+		4'b1000: MAIN_MEMORY_data_OutBUS = 32'b1000 0010 0001 0000 0010 0000 0000 0000;
+		4'b1001: MAIN_MEMORY_data_OutBUS = 32'b1000 0010 0001 0000 0010 0000 0000 0000;
+		4'b1010: MAIN_MEMORY_data_OutBUS = 32'b1000 0010 0001 0000 0010 0000 0000 0000;
+		4'b1011: MAIN_MEMORY_data_OutBUS = 32'b1000 0010 0001 0000 0010 0000 0000 0000;
+		4'b1100: MAIN_MEMORY_data_OutBUS = 32'b1000 0010 0001 0000 0010 0000 0000 0000;
+		default :   CS_CS_ADDRESS_MUX_data_OutBUS = CS_CS_ADDRESS_MUX_data_MIR; 
+	endcase
+end
+//=======================================================
+//  Outputs
+//=======================================================
+// OUTPUT LOGIC : COMBINATIONAL
+
+endmodule
