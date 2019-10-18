@@ -174,16 +174,16 @@ CC_MUXX_BUS_64_TO_32 CC_MUXX_BUS_64_TO_32_u0 (
 	.CC_MUX_BUS_64_TO_32_RD(RD_Centro_Control_Main_Memory_Cable)
 );
 
-//MAIN_MEMORY MAIN_MEMORY_u0 (
-//	//--------INPUTS----------------------------
-//	.MAIN_MEMORY_data_InBUS(BUSB_To_Main_Memory_Cable),
-//	.MAIN_MEMORY_ADDRESS_data_InBUS(BUSA_To_Main_Memory_Cable),
-//	.MAIN_MEMORY_RD_data_In(RD_Centro_Control_Main_Memory_Cable),
-//	.MAIN_MEMORY_WR_data_In(WR_Centro_Control_Main_Memory_Cable),
-//	.MAIN_MEMORY_CLOCK_50(BB_SYSTEM_CLOCK_50),
-//	//--------OUTPUTS---------------------------
-//	.MAIN_MEMORY_data_OutBUS(Main_Memory_To_CC_MUXX_BUS_64_TO_32_Cable),
-//	.MAIN_MEMORY_ACK(ACK_Main_Memory_Centro_Control_Cable)
-//);
+MAIN_MEMORY MAIN_MEMORY_u0 (
+	//--------INPUTS----------------------------
+	.MAIN_MEMORY_data_InBUS(BUSB_To_Main_Memory_Cable),
+	.MAIN_MEMORY_ADDRESS_data_InBUS(BUSA_To_Main_Memory_Cable),
+	.MAIN_MEMORY_RD_data_In(RD_Centro_Control_Main_Memory_Cable),
+	.MAIN_MEMORY_WR_data_In(WR_Centro_Control_Main_Memory_Cable),
+	.MAIN_MEMORY_CLOCK_50(BB_SYSTEM_CLOCK_50),
+	//--------OUTPUTS---------------------------
+	.MAIN_MEMORY_data_OutBUS(Main_Memory_To_CC_MUXX_BUS_64_TO_32_Cable),
+	.MAIN_MEMORY_ACK(ACK_Main_Memory_Centro_Control_Cable)
+);
 
 endmodule
