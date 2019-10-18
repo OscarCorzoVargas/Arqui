@@ -46,6 +46,8 @@ output		[MIR_LENGTH_Reg-1:0]	CS_MIR_ADDRESS_data_OutBUS;
 input		CS_MIR_CLOCK_50;
 input		CS_MIR_RESET_InHigh;
 input		[MIR_LENGTH_INSTR-1:0]	CS_MIR_INSTRUCTION_data_InBUS;
+input 	CS_MIR_clear_InLow;
+input		CS_MIR_load_InLow;
 
 //=======================================================
 //  REG/WIRE declarations
@@ -73,7 +75,7 @@ end
 //=======================================================
 //OUTPUT LOGIC: COMBINATIONAL
 assign CS_MIR_A_data_OutBUS = CS_MIR_Register[40:35];
-assign CS_MIR_AMUX_data_Out = CS_MIR_Register34];
+assign CS_MIR_AMUX_data_Out = CS_MIR_Register[34];
 assign CS_MIR_B_data_OutBUS = CS_MIR_Register[33:28];
 assign CS_MIR_BMUX_data_Out = CS_MIR_Register[27];
 assign CS_MIR_C_data_OutBUS = CS_MIR_Register[26:21];

@@ -25,6 +25,7 @@ module uDATAPATH #(parameter DATAWIDTH_BUS=32, parameter DATAWIDTH_DECODER_SELEC
 	uDATAPATH_carry_OutLow,
 	uDATAPATH_negative_OutLow,
 	uDATAPATH_zero_OutLow,
+	uDATAPATH_Registro_IR,
 	//////////// INPUTS //////////
 	uDATAPATH_CLOCK_50,
 	uDATAPATH_RESET_InHigh,
@@ -56,6 +57,8 @@ output 	uDATAPATH_overflow_OutLow;
 output 	uDATAPATH_carry_OutLow;
 output 	uDATAPATH_negative_OutLow;
 output 	uDATAPATH_zero_OutLow;
+output 	[DATAWIDTH_BUS-1:0]uDATAPATH_Registro_IR;
+
 //////////// INPUTS //////////
 input 	uDATAPATH_CLOCK_50;
 input 	uDATAPATH_RESET_InHigh;
@@ -179,7 +182,7 @@ SC_RegGENERAL #(.RegGENERAL_DATAWIDTH(DATAWIDTH_BUS)) SC_PC(
 SC_RegGENERAL #(.RegGENERAL_DATAWIDTH(DATAWIDTH_BUS)) SC_IR(
 // port map - connection between master ports and signals/registers   
 	.SC_RegGENERAL_data_OutBUS_A(RegGENERAL_2_MUX_dataIR_wireBUS_A),
-	.SC_RegGENERAL_data_OutBUS_B(RegGENERAL_2_MUX_dataIR_wireBUS_B),
+	.SC_RegGENERAL_data_OutBUS_B(uDATAPATH_Registro_IR),
 	.SC_RegGENERAL_CLOCK_50(uDATAPATH_CLOCK_50),
 	.SC_RegGENERAL_RESET_InHigh(uDATAPATH_RESET_InHigh),
 	.SC_RegGENERAL_clear_InLow(DECODER_2_RegGENERAL_decoderclearselection_wireBUS[3]),
@@ -274,7 +277,7 @@ CC_MUXX #(.DATAWIDTH_MUX_SELECTION(DATAWIDTH_MUX_SELECTION), .DATAWIDTH_BUS(DATA
 	.CC_MUX_data3_InBUS(RegGENERAL_2_MUX_data3_wireBUS_B), 
 	.CC_MUX_data4_InBUS(RegGENERAL_2_MUX_dataRS_wireBUS_B), 
 	.CC_MUX_data5_InBUS(RegGENERAL_2_MUX_dataPC_wireBUS_B),
-	.CC_MUX_data6_InBUS(RegGENERAL_2_MUX_dataIR_wireBUS_B), //REPEATED BUT MUST CHANGE
+	.CC_MUX_data6_InBUS(uDATAPATH_Registro_IR), //REPEATED BUT MUST CHANGE
 	.CC_MUX_data7_InBUS(RegGENERAL_2_MUX_data0_wireBUS_B), //REPEATED BUT MUST CHANGE
 	.CC_MUX_selection_InBUS(DECODER_B)
 );
@@ -315,5 +318,6 @@ CC_MUXX_BUS #(.DATAWIDTH_MUX_SELECTION_REG(5), .DATAWIDTH_MUX_SELECTION_CONTROL(
 	.CC_MUX_selector_InBUS(uDATAPATH_BUS_SELECTOR_C),
 	.CC_MUX_data_OutBUS(uDATAPATH_DECODERC_InBUS)
 );
+
 endmodule
 
