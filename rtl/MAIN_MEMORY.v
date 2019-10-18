@@ -52,10 +52,21 @@ begin
 		12'b100000110000: MAIN_MEMORY_data_OutBUS = 32'b11111111111111111111111111111111;		//endSim: halt
 		default :   MAIN_MEMORY_data_OutBUS = 32'b00000000000000000000000000000000; 	//NADA
 	endcase
+	endcase
+	if (MAIN_MEMORY_RD_data_In == 1'b0)
+		MAIN_MEMORY_Signal = MAIN_MEMORY_data_OutBUS;
+	else
+		MAIN_MEMORY_Signal = MAIN_MEMORY_Register;
+end
+//STATE REGISTER: SEQUENTIAL
+always @(posedge MAIN_MEMORY_CLOCK_50)
+begin
+	MAIN_MEMORY_Register <= MAIN_MEMORY_Signal;
 end
 //=======================================================
 //  Outputs
 //=======================================================
 // OUTPUT LOGIC : COMBINATIONAL
-
+assign MAIN_MEMORY_data_OutBUS = MAIN_MEMORY_Register;
+	
 endmodule
