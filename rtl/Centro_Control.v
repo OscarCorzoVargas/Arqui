@@ -40,7 +40,8 @@ module Centro_Control (
 	Centro_Control_CLOCK_50,
 	Centro_Control_RESET_InHigh,
 	Centro_Control_clear_InLow,
-	Centro_Control_load_InLow
+	Centro_Control_load_InLow,
+	Centro_Control_Conditions_C
 );
 //=======================================================
 //  PARAMETER declarations
@@ -70,6 +71,7 @@ input 	Centro_Control_Bit13;
 input		Centro_Control_ACK;          //Viene de Main Memory
 input 	Centro_Control_clear_InLow;
 input 	Centro_Control_load_InLow;
+input		Centro_Control_Conditions_C;
 
 //////////// OUTPUTS //////////
 
@@ -93,6 +95,7 @@ wire [OUT_CSAI-1:0] JUMP_ADRR_CSAI_CSMUX_CABLE;
 wire [DATAWIDTH_COND-1:0] COND_MIR_CBL_CABLE;
 wire [DATAWIDTH_ADRR-1:0] JUMP_ADRR_MIR_CSMUX_CABLE;
 wire [DATAWIDTH_SELECTION_LENG-1:0] selector_CBL_CSMUX_CABLE;
+wire [DATAWIDTH_ALU-1:0] FLAGS_PSR_CBL_CABLE;
 //=======================================================
 //  Structural coding
 //=======================================================
@@ -143,6 +146,17 @@ CS_MIR Centro_Control_CS_MIR (
 	.CS_MIR_INSTRUCTION_data_InBUS(JUMP_ADRR_CSAI_CSMUX_CABLE)
 );
 
-
+CC_PSR #( .DATAWIDTH_ALU_SELECTION(DATAWIDTH_ALU)) Centro_Control_PSR (
+	//------Salidas----------------
+	.CC_PSR_OUT(FLAGS_PSR_CBL_CABLE),
+	//------Entradas---------------
+	.Set_Conditions_C(Centro_Control_Conditions_C),
+	.CC_overflow(Centro_Control_ALU_overflow_Low),
+	.CC_carry(Centro_Control_ALU_carry_Low),
+	.CC_negative(Centro_Control_ALU_negative_Low),
+	.CC_zero(Centro_Control_ALU_zero_Low),
+	.CC_PSR_CLOCK_50(Centro_Control_CLOCK_50)
+);
 endmodule
+
 
