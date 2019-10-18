@@ -155,4 +155,16 @@ Centro_Control Centro_Control_u0 (
 	.Centro_Control_ALU(ALU_uDATAPATH_Centro_Control_Cable)
 );
 
+//MAIN_MEMORY MAIN_MEMORY_u0 (
+//	//--------INPUTS----------------------------
+//	.MAIN_MEMORY_data_InBUS(),
+//	.MAIN_MEMORY_ADDRESS_data_InBUS(),
+//	.MAIN_MEMORY_RD_data_In(RD_Centro_Control_Main_Memory_Cable),
+//	.MAIN_MEMORY_WR_data_In(WR_Centro_Control_Main_Memory_Cable),
+//	.MAIN_MEMORY_CLOCK_50(BB_SYSTEM_CLOCK_50),
+//	//--------OUTPUTS---------------------------
+//	.MAIN_MEMORY_data_OutBUS(),
+//	.MAIN_MEMORY_ACK(ACK_Main_Memory_Centro_Control_Cable)
+//);	
+	
 endmodule
