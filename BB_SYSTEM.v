@@ -44,6 +44,7 @@ parameter DATAWIDTH_MUX_SELECTION = 3;
 parameter DATA_REGFIXED_INIT_0 = 8'b00001001;
 parameter DATA_REGFIXED_INIT_1 = 8'b00001111;
 parameter DATA_BUS_CONTROL = 6;
+parameter DATAWIDTH_CENTRO_CONTROL_ALU = 4;
 //=======================================================
 //  PORT declarations
 //=======================================================
@@ -93,19 +94,26 @@ wire Selector_Bus_C_CentroControl_uDATAPATH_Cable;
 wire [DATAWIDTH_BUS-1:0] IR_uDATAPATH_Centro_Control_Cable;
 wire Centro_Control_clear_InLow_Cable;
 wire Centro_Control_load_InLow_Cable;
-wire [DATAWIDTH_BUS-1:0] ALU_uDATAPATH_Centro_Control_Cable;
+wire [DATAWIDTH_CENTRO_CONTROL_ALU-1:0] ALU_uDATAPATH_Centro_Control_Cable;
 
 // CONEXIONES ENTRE MAIN MEMORY Y CENTRO DE CONTROL
 wire ACK_Main_Memory_Centro_Control_Cable;
 wire RD_Centro_Control_Main_Memory_Cable;
 wire WR_Centro_Control_Main_Memory_Cable;
 
+// CONEXIONES ENTRE MAIN MEMORY Y DATAPATH
+wire [DATAWIDTH_BUS-1:0] Main_Memory_To_CC_MUXX_BUS_64_TO_32_Cable;
+wire [DATAWIDTH_BUS-1:0] ALU_To_CC_MUXX_BUS_64_TO_32_Cable;
+wire [DATAWIDTH_BUS-1:0] CC_MUXX_BUS_64_TO_32_TO_BUSSC_Cable;
+wire [DATAWIDTH_BUS-1:0] BUSA_To_Main_Memory_Cable;
+wire [DATAWIDTH_BUS-1:0] BUSB_To_Main_Memory_Cable;
+
 //=======================================================
 //  Structural coding
 //=======================================================
 uDATAPATH #(.DATAWIDTH_BUS(DATAWIDTH_BUS), .DATAWIDTH_DECODER_SELECTION(DATAWIDTH_DECODER_SELECTION), .DATAWIDTH_DECODER_OUT(DATAWIDTH_DECODER_OUT), .DATAWIDTH_ALU_SELECTION(DATAWIDTH_ALU_SELECTION), .DATAWIDTH_MUX_SELECTION(DATAWIDTH_MUX_SELECTION), .DATA_REGFIXED_INIT_0(DATA_REGFIXED_INIT_0), .DATA_REGFIXED_INIT_1(DATA_REGFIXED_INIT_1), .DATA_BUS_CONTROL(DATA_BUS_CONTROL)) uDATAPATH_u0 (
 // port map - connection between master ports and signals/registers   
-	.uDATAPATH_data_OutBUS(ALU_uDATAPATH_Centro_Control_Cable),
+	.uDATAPATH_data_OutBUS(ALU_To_CC_MUXX_BUS_64_TO_32_Cable),
 	.uDATAPATH_overflow_OutLow(uDATAPATH_2_STATEMACHINE_overflow_wireCONTROL),
 	.uDATAPATH_carry_OutLow(uDATAPATH_2_STATEMACHINE_carry_wireCONTROL),
 	.uDATAPATH_negative_OutLow(uDATAPATH_2_STATEMACHINE_negative_wireCONTROL),
@@ -114,9 +122,10 @@ uDATAPATH #(.DATAWIDTH_BUS(DATAWIDTH_BUS), .DATAWIDTH_DECODER_SELECTION(DATAWIDT
 	.uDATAPATH_RESET_InHigh(BB_SYSTEM_RESET_InHigh),
 	.uDATAPATH_decoderclearselection_InBUS(STATEMACHINE_2_uDATAPATH_decoderclearselection_wireCONTROL), 
 	.uDATAPATH_decoderloadselection_InBUS(STATEMACHINE_2_uDATAPATH_decoderloadselection_wireCONTROL), 
-	//.uDATAPATH_DECODERA_InBUS(STATEMACHINE_2_uDATAPATH_muxselectionBUSA_wireCONTROL),
-	//.uDATAPATH_DECODERB_InBUS(STATEMACHINE_2_uDATAPATH_muxselectionBUSB_wireCONTROL),
-	.uDATAPATH_aluselection_InBUS(STATEMACHINE_2_uDATAPATH_aluselection_wireCONTROL),
+	.uDATAPATH_BUS_A(BUSA_To_Main_Memory_Cable),
+	.uDATAPATH_BUS_B(BUSB_To_Main_Memory_Cable),
+	
+	.uDATAPATH_aluselection_InBUS(ALU_uDATAPATH_Centro_Control_Cable),
 	.uDATAPATH_regSHIFTERclear_InLow(STATEMACHINE_2_uDATAPATH_regSHIFTERclear_wireCONTROL),
 	.uDATAPATH_regSHIFTERload_InLow(STATEMACHINE_2_uDATAPATH_regSHIFTERload_wireCONTROL),
 	.uDATAPATH_regSHIFTERshiftselection_InLow(STATEMACHINE_2_uDATAPATH_regSHIFTERshiftselection_wireCONTROL),
@@ -126,7 +135,8 @@ uDATAPATH #(.DATAWIDTH_BUS(DATAWIDTH_BUS), .DATAWIDTH_DECODER_SELECTION(DATAWIDT
 	.uDATAPATH_BUS_SELECTOR_A(Selector_Bus_A_CentroControl_uDATAPATH_Cable),
 	.uDATAPATH_BUS_SELECTOR_B(Selector_Bus_B_CentroControl_uDATAPATH_Cable),
 	.uDATAPATH_BUS_SELECTOR_C(Selector_Bus_C_CentroControl_uDATAPATH_Cable),
-	.uDATAPATH_Registro_IR(IR_uDATAPATH_Centro_Control_Cable)
+	.uDATAPATH_Registro_IR(IR_uDATAPATH_Centro_Control_Cable),
+	.uDATAPATH_BUS_C(CC_MUXX_BUS_64_TO_32_TO_BUSSC_Cable)
 	
 );
 
@@ -155,16 +165,25 @@ Centro_Control Centro_Control_u0 (
 	.Centro_Control_ALU(ALU_uDATAPATH_Centro_Control_Cable)
 );
 
+CC_MUXX_BUS_64_TO_32 CC_MUXX_BUS_64_TO_32_u0 (
+	//------OUTPUTS--------------------------
+	.CC_MUX_data_OutBUS(CC_MUXX_BUS_64_TO_32_TO_BUSSC_Cable),
+	//-------INPUTS--------------------------
+	.CC_MUX_BUS_64_TO_32_InBUS_Main_Memory(Main_Memory_To_CC_MUXX_BUS_64_TO_32_Cable),
+	.CC_MUX_BUS_64_TO_32_ALU(ALU_To_CC_MUXX_BUS_64_TO_32_Cable),
+	.CC_MUX_BUS_64_TO_32_RD(RD_Centro_Control_Main_Memory_Cable)
+);
+
 //MAIN_MEMORY MAIN_MEMORY_u0 (
 //	//--------INPUTS----------------------------
-//	.MAIN_MEMORY_data_InBUS(),
-//	.MAIN_MEMORY_ADDRESS_data_InBUS(),
+//	.MAIN_MEMORY_data_InBUS(BUSB_To_Main_Memory_Cable),
+//	.MAIN_MEMORY_ADDRESS_data_InBUS(BUSA_To_Main_Memory_Cable),
 //	.MAIN_MEMORY_RD_data_In(RD_Centro_Control_Main_Memory_Cable),
 //	.MAIN_MEMORY_WR_data_In(WR_Centro_Control_Main_Memory_Cable),
 //	.MAIN_MEMORY_CLOCK_50(BB_SYSTEM_CLOCK_50),
 //	//--------OUTPUTS---------------------------
-//	.MAIN_MEMORY_data_OutBUS(),
+//	.MAIN_MEMORY_data_OutBUS(Main_Memory_To_CC_MUXX_BUS_64_TO_32_Cable),
 //	.MAIN_MEMORY_ACK(ACK_Main_Memory_Centro_Control_Cable)
-//);	
-	
+//);
+
 endmodule
