@@ -34,7 +34,7 @@ module CC_PSR #(parameter DATAWIDTH_ALU_SELECTION=4)(
 //INPUT LOGIC: COMBINATIONAL
 	always@(*)
 	if(Set_Conditions_C==1'b1)
-		RegGENERAL_Signal = {CC_overflow,CC_carry,CC_negative,CC_zero};
+		RegGENERAL_Signal = {CC_negative,CC_zero,CC_overflow,CC_carry};
    else
       RegGENERAL_Signal = RegGENERAL_Register;
 		
