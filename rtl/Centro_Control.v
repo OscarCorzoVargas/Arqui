@@ -160,13 +160,13 @@ CC_PSR #( .DATAWIDTH_ALU_SELECTION(DATAWIDTH_ALU)) Centro_Control_PSR (
 	.CC_PSR_CLOCK_50(Centro_Control_CLOCK_50)
 );
 
-//CS_MIR #(.ROM_BUS_In(OUT_CSAI), .ROM_BUS_Out(DATAWIDTH_MIR)) Centro_Control_ROM (
-//	// port map - connection between master ports and signals/registers
-//	// ---- Salidas -------------
-//	.ROM_DataBUS_Out(ROM_TO_MIR),
-//	// ---- Entradas ------------
-//	.ROM_DataBUS_In(JUMP_ADRR_CSAI_CSMUX_CABLE)
-//);
+ROM #(.ROM_BUS_In(OUT_CSAI), .ROM_BUS_Out(DATAWIDTH_MIR)) Centro_Control_ROM (
+	// port map - connection between master ports and signals/registers
+	// ---- Salidas -------------
+	.ROM_DataBUS_Out(ROM_TO_MIR),
+	// ---- Entradas ------------
+	.ROM_DataBUS_In(JUMP_ADRR_CSAI_CSMUX_CABLE)
+);
 
 CBL Centro_Control_CBL(
 	//------Salidas----------------
