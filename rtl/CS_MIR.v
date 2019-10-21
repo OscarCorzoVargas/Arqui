@@ -42,7 +42,7 @@ output		CS_MIR_RD_data_Out;
 output		CS_MIR_WR_data_Out;
 output		[MIR_LENGTH_Reg-1:0]	CS_MIR_ALU_data_OutBUS;
 output		[MIR_LENGTH_Reg-1:0]	CS_MIR_COND_data_OutBUS;
-output		[MIR_LENGTH_Reg-1:0]	CS_MIR_ADDRESS_data_OutBUS;
+output		[MIR_LENGTH_ADDR-1:0]	CS_MIR_ADDRESS_data_OutBUS;
 input		CS_MIR_CLOCK_50;
 input		CS_MIR_RESET_InHigh;
 input		[MIR_LENGTH_INSTR-1:0]	CS_MIR_INSTRUCTION_data_InBUS;
