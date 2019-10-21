@@ -29,7 +29,8 @@ module CC_MUXX #(parameter DATAWIDTH_MUX_SELECTION=4, parameter DATAWIDTH_BUS=8)
 	CC_MUX_data4_InBUS,	
 	CC_MUX_data5_InBUS,	
 	CC_MUX_data6_InBUS,	
-	CC_MUX_data7_InBUS,	
+	CC_MUX_data7_InBUS,
+	CC_MUX_data8_InBUS,	
 	CC_MUX_selection_InBUS
 );
 //=======================================================
@@ -48,6 +49,7 @@ input			[DATAWIDTH_BUS-1:0] CC_MUX_data4_InBUS;
 input			[DATAWIDTH_BUS-1:0] CC_MUX_data5_InBUS;
 input			[DATAWIDTH_BUS-1:0] CC_MUX_data6_InBUS;
 input			[DATAWIDTH_BUS-1:0] CC_MUX_data7_InBUS;
+input			[DATAWIDTH_BUS-1:0] CC_MUX_data8_InBUS;
 input			[DATAWIDTH_MUX_SELECTION-1:0] CC_MUX_selection_InBUS;
 //=======================================================
 //  REG/WIRE declarations
@@ -69,6 +71,7 @@ begin
 		4'b0101: CC_MUX_data_OutBUS = CC_MUX_data5_InBUS;
 		4'b0110: CC_MUX_data_OutBUS = CC_MUX_data6_InBUS;
 		4'b0111: CC_MUX_data_OutBUS = CC_MUX_data7_InBUS;
+		4'b1000: CC_MUX_data_OutBUS = CC_MUX_data8_InBUS; 
 		default :   CC_MUX_data_OutBUS = CC_MUX_data0_InBUS; // channel 0 is selected 
 	endcase
 end
@@ -78,4 +81,3 @@ end
 // OUTPUT LOGIC : COMBINATIONAL
 
 endmodule
-
