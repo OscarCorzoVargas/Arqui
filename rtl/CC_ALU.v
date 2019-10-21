@@ -86,7 +86,7 @@ begin
 			 end
 		4'b1101: CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS + 1'b1;				//INCREMENT A 1
 		4'b1110: CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS + 3'b100;				//INCREMENT A 4
-		4'b1111: CC_ALU_data_OutBUS = {CC_ALU_dataA_InBUS[4:0], CC_ALU_dataA_InBUS[DATAWIDTH_BUS-1:5]};	//RSHIFT5
+		4'b1111: CC_ALU_data_OutBUS = {CC_ALU_dataA_InBUS[31], CC_ALU_dataA_InBUS[31], CC_ALU_dataA_InBUS[31], CC_ALU_dataA_InBUS[31], CC_ALU_dataA_InBUS[31], CC_ALU_dataA_InBUS[DATAWIDTH_BUS-1:5]};	//RSHIFT5
 
 		default :  CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS; // channel 0 is selected
 	endcase
