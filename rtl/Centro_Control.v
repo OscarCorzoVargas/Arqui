@@ -168,6 +168,14 @@ CC_PSR #( .DATAWIDTH_ALU_SELECTION(DATAWIDTH_ALU)) Centro_Control_PSR (
 //	.ROM_DataBUS_In(JUMP_ADRR_CSAI_CSMUX_CABLE)
 //);
 
+CBL Centro_Control_CBL(
+	//------Salidas----------------
+	.CBL_OUT(selector_CBL_CSMUX_CABLE),
+	//------Entradas---------------
+	.bit13(Centro_Control_Bit13),
+	.ALU_COND(COND_MIR_CBL_CABLE),
+	.PSR_OUT(FLAGS_PSR_CBL_CABLE)
+);
 endmodule
 
 
