@@ -1,20 +1,3 @@
-/*######################################################################
-//#	G0B1T: HDL EXAMPLES. 2018.
-//######################################################################
-//# Copyright (C) 2018. F.E.Segura-Quijano (FES) fsegura@uniandes.edu.co
-//# 
-//# This program is free software: you can redistribute it and/or modify
-//# it under the terms of the GNU General Public License as published by
-//# the Free Software Foundation, version 3 of the License.
-//#
-//# This program is distributed in the hope that it will be useful,
-//# but WITHOUT ANY WARRANTY; without even the implied warranty of
-//# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-//# GNU General Public License for more details.
-//#
-//# You should have received a copy of the GNU General Public License
-//# along with this program.  If not, see <http://www.gnu.org/licenses/>
-//####################################################################*/
 //=======================================================
 //  MODULE Definition
 //=======================================================
@@ -116,6 +99,14 @@ wire [DATAWIDTH_DECODER_SELECTION-1:0]	uDATAPATH_DECODERC_InBUS;
 // CABLES PARA TEMP 0
 wire [DATAWIDTH_BUS-1:0] RegGENERAL_2_MUX_Temp0_wireBUS_A;
 wire [DATAWIDTH_BUS-1:0] RegGENERAL_2_MUX_Temp0_wireBUS_B;
+
+//	CABLES PARA %PC
+wire [DATAWIDTH_BUS-1:0]RegGENERAL_2_MUX_dataPC_wireBUS_A;
+wire [DATAWIDTH_BUS-1:0]RegGENERAL_2_MUX_dataPC_wireBUS_B;
+
+//	CABLES PARA %RS
+wire [DATAWIDTH_BUS-1:0]RegGENERAL_2_MUX_dataRS_wireBUS_A;
+wire [DATAWIDTH_BUS-1:0]RegGENERAL_2_MUX_dataRS_wireBUS_B;
 	//=======================================================
 //  Structural coding
 //=======================================================
@@ -204,37 +195,6 @@ SC_RegGENERAL #(.RegGENERAL_DATAWIDTH(DATAWIDTH_BUS)) SC_Temp0(
 	.SC_RegGENERAL_data_InBUS(uDATAPATH_BUS_C)
 );
 
-//-------------------------------------------------------
-//-------------------------------------------------------
-// FIXED_REGISTERS
-//SC_RegFIXED #(.DATAWIDTH_BUS(DATAWIDTH_BUS), .DATA_REGFIXED_INIT(DATA_REGFIXED_INIT_0)) SC_RegFIXED_u0 (
-// port map - connection between master ports and signals/registers   
-//	.SC_RegFIXED_data_OutBUS(RegFIXED_2_MUX_data0_wireBUS),
-//	.SC_RegFIXED_CLOCK_50(uDATAPATH_CLOCK_50),
-//	.SC_RegFIXED_RESET_InHigh(uDATAPATH_RESET_InHigh)
-//);
-//SC_RegFIXED #(.DATAWIDTH_BUS(DATAWIDTH_BUS), .DATA_REGFIXED_INIT(DATA_REGFIXED_INIT_1)) SC_RegFIXED_u1 (
-// port map - connection between master ports and signals/registers   
-//	.SC_RegFIXED_data_OutBUS(RegFIXED_2_MUX_data1_wireBUS),
-//	.SC_RegFIXED_CLOCK_50(uDATAPATH_CLOCK_50),
-//	.SC_RegFIXED_RESET_InHigh(uDATAPATH_RESET_InHigh)
-//);
-//-------------------------------------------------------
-//-------------------------------------------------------
-// SHIFT_REGISTER
-//SC_RegSHIFTER #(.RegSHIFTER_DATAWIDTH(DATAWIDTH_BUS)) SC_RegSHIFTER_u0 (
-// port map - connection between master ports and signals/registers   
-//	.SC_RegSHIFTER_data_OutBUS(RegSHIFTER_2_RegGENERAL_dataC_wireBUS),
-//	.SC_RegSHIFTER_CLOCK_50(uDATAPATH_CLOCK_50),
-//	.SC_RegSHIFTER_RESET_InHigh(uDATAPATH_RESET_InHigh),
-//	.SC_RegSHIFTER_clear_InLow(uDATAPATH_regSHIFTERclear_InLow),
-//	.SC_RegSHIFTER_load_InLow(uDATAPATH_regSHIFTERload_InLow),
-//	.SC_RegSHIFTER_shiftselection_InLow(uDATAPATH_regSHIFTERshiftselection_InLow),
-//	.SC_RegSHIFTER_data_InBUS(ALU_2_RegSHIFTER_data_wireBUS)
-//);
-//-------------------------------------------------------
-//-------------------------------------------------------
-// 
 CC_DECODER #(.DATAWIDTH_DECODER_SELECTION(DATAWIDTH_DECODER_SELECTION), .DATAWIDTH_DECODER_OUT(DATAWIDTH_DECODER_OUT)) CC_DECODER_CLEAR
 (
 // port map - connection between master ports and signals/registers   
@@ -248,20 +208,7 @@ CC_DECODER #(.DATAWIDTH_DECODER_SELECTION(DATAWIDTH_DECODER_SELECTION), .DATAWID
 	.CC_DECODER_datadecoder_OutBUS(DECODER_2_RegGENERAL_decoderloadselection_wireBUS),
 	.CC_DECODER_selection_InBUS(uDATAPATH_DECODERC_InBUS)
 );
-//
-CC_DECODER #(.DATAWIDTH_DECODER_SELECTION(DATAWIDTH_DECODER_SELECTION), .DATAWIDTH_DECODER_OUT(DATAWIDTH_DECODER_OUT)) CC_DECODER_A
-(
-// port map - connection between master ports and signals/registers   
-	.CC_DECODER_datadecoder_OutBUS(DECODER_A),
-	.CC_DECODER_selection_InBUS(uDATAPATH_DECODERA_InBUS)
-);
-//
-CC_DECODER #(.DATAWIDTH_DECODER_SELECTION(DATAWIDTH_DECODER_SELECTION), .DATAWIDTH_DECODER_OUT(DATAWIDTH_DECODER_OUT)) CC_DECODER_B
-(
-// port map - connection between master ports and signals/registers   
-	.CC_DECODER_datadecoder_OutBUS(DECODER_B),
-	.CC_DECODER_selection_InBUS(uDATAPATH_DECODERB_InBUS)
-);
+
 //-------------------------------------------------------
 //-------------------------------------------------------
 // 
@@ -278,7 +225,7 @@ CC_MUXX #(.DATAWIDTH_MUX_SELECTION(DATAWIDTH_MUX_SELECTION), .DATAWIDTH_BUS(DATA
 	.CC_MUX_data6_InBUS(RegGENERAL_2_MUX_dataPC_wireBUS_A), //REPEATED BUT MUST CHANGE
 	.CC_MUX_data7_InBUS(RegGENERAL_2_MUX_dataIR_wireBUS_A), //REPEATED BUT MUST CHANGE
 	.CC_MUX_data8_InBUS(RegGENERAL_2_MUX_Temp0_wireBUS_A),
-	.CC_MUX_selection_InBUS(DECODER_A)
+	.CC_MUX_selection_InBUS(uDATAPATH_DECODERA_InBUS)
 
 );
 //// 
@@ -295,7 +242,7 @@ CC_MUXX #(.DATAWIDTH_MUX_SELECTION(DATAWIDTH_MUX_SELECTION), .DATAWIDTH_BUS(DATA
 	.CC_MUX_data6_InBUS(RegGENERAL_2_MUX_dataPC_wireBUS_B), //REPEATED BUT MUST CHANGE
 	.CC_MUX_data7_InBUS(uDATAPATH_Registro_IR), //REPEATED BUT MUST CHANGE
 	.CC_MUX_data8_InBUS(RegGENERAL_2_MUX_Temp0_wireBUS_B),
-	.CC_MUX_selection_InBUS(DECODER_B)
+	.CC_MUX_selection_InBUS(uDATAPATH_DECODERB_InBUS)
 );
 //-------------------------------------------------------
 //-------------------------------------------------------
@@ -336,5 +283,4 @@ CC_MUXX_BUS #(.DATAWIDTH_MUX_SELECTION_REG(5), .DATAWIDTH_MUX_SELECTION_CONTROL(
 );
 
 endmodule
-
 
