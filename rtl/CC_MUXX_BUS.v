@@ -46,7 +46,7 @@ begin
 			default :   CC_MUX_data_OutBUS = 4'b0000; // channel 0 is selected 
 		endcase
 	else
-		case (CC_MUX_control_InBUS)	
+		case (CC_MUX_registro_InBUS)	
 			// Example to more outputs: WaitStart: begin sResetCounter = 0; sCuenteUP = 0; end
 				5'b00000: CC_MUX_data_OutBUS = 4'b0000;
 				5'b00001: CC_MUX_data_OutBUS = 4'b0001;
