@@ -33,10 +33,10 @@ reg [CSAI_LENGTH_ADDR-1:0] CSAI_Signal;
 //INPUT LOGIC: COMBINATIONAL
 always @(*)
 begin
-	if (CS_CSAI_ACK == 1'b1)
+//	if (CS_CSAI_ACK == 1'b1)
 		CSAI_Signal = CS_CSAI_JUMP_ADDR + 11'b00000000001;
-	else
-		CSAI_Signal = CSAI_Register;
+//	else
+//		CSAI_Signal = CSAI_Register;
 	end	
 //STATE REGISTER: SEQUENTIAL
 always @(posedge CS_CSAI_CLOCK_50, posedge CS_CSAI_RESET)
