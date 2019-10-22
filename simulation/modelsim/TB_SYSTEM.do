@@ -30,7 +30,14 @@ add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/SC_Temp
 #add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/CC_ALU_u0/CC_ALU_zero_OutLow
 #add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/CC_ALU_u0/CC_ALU_selection_InBUS
 
-add wave  -divider MAIN MEMORY
+add wave  -divider MAIN_MEMORY
+add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/MAIN_MEMORY_u0/MAIN_MEMORY_data_InBUS
+add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/MAIN_MEMORY_u0/MAIN_MEMORY_ADDRESS_data_InBUS
+add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/MAIN_MEMORY_u0/MAIN_MEMORY_RD_data_In
+add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/MAIN_MEMORY_u0/MAIN_MEMORY_WR_data_In
+add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/MAIN_MEMORY_u0/MAIN_MEMORY_CLOCK_50
+add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/MAIN_MEMORY_u0/MAIN_MEMORY_data_OutBUS
+add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/MAIN_MEMORY_u0/MAIN_MEMORY_ACK
 
 restart
 run 1ms
