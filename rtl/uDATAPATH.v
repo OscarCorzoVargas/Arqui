@@ -65,10 +65,14 @@ input 	[DATAWIDTH_BUS-1:0] uDATAPATH_BUS_C;
 //  REG/WIRE declarations
 //=======================================================
 // GENERAL_REGISTERS OUTPUTS WIRES
-wire [DATAWIDTH_BUS-1:0] RegGENERAL_2_MUX_data0_wireBUS; 
-wire [DATAWIDTH_BUS-1:0] RegGENERAL_2_MUX_data1_wireBUS; 
-wire [DATAWIDTH_BUS-1:0] RegGENERAL_2_MUX_data2_wireBUS; 
-wire [DATAWIDTH_BUS-1:0] RegGENERAL_2_MUX_data3_wireBUS; 
+wire [DATAWIDTH_BUS-1:0] RegGENERAL_2_MUX_data0_wireBUS_A; 
+wire [DATAWIDTH_BUS-1:0] RegGENERAL_2_MUX_data1_wireBUS_A; 
+wire [DATAWIDTH_BUS-1:0] RegGENERAL_2_MUX_data2_wireBUS_A; 
+wire [DATAWIDTH_BUS-1:0] RegGENERAL_2_MUX_data3_wireBUS_A;
+wire [DATAWIDTH_BUS-1:0] RegGENERAL_2_MUX_data0_wireBUS_B; 
+wire [DATAWIDTH_BUS-1:0] RegGENERAL_2_MUX_data1_wireBUS_B; 
+wire [DATAWIDTH_BUS-1:0] RegGENERAL_2_MUX_data2_wireBUS_B; 
+wire [DATAWIDTH_BUS-1:0] RegGENERAL_2_MUX_data3_wireBUS_B;
 // FIXED_REGISTERS OUTPUTS WIRES
 wire [DATAWIDTH_BUS-1:0] RegFIXED_2_MUX_data0_wireBUS; 
 wire [DATAWIDTH_BUS-1:0] RegFIXED_2_MUX_data1_wireBUS; 
