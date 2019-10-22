@@ -76,7 +76,7 @@ input 	[DATA_BUS_CONTROL-1:0] uDATAPATH_BUS_CONTROL_C;
 input 	uDATAPATH_BUS_SELECTOR_A;
 input 	uDATAPATH_BUS_SELECTOR_B;
 input 	uDATAPATH_BUS_SELECTOR_C;
-input 	uDATAPATH_BUS_C;
+input 	[DATAWIDTH_BUS-1:0] uDATAPATH_BUS_C;
 
 //=======================================================
 //  REG/WIRE declarations
