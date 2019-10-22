@@ -8,36 +8,47 @@ add wave -noupdate /TB_SYSTEM/TB_SYSTEM_CLOCK_50
 add wave -noupdate /TB_SYSTEM/TB_SYSTEM_RESET_InHigh
 add wave  -radix Unsigned /TB_SYSTEM/TB_SYSTEM_data_OutBUS
 
-add wave  -divider REGISTERS
-#add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/SC_RegFIXED_u0/SC_RegFIXED_data_OutBUS
-#add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/SC_RegFIXED_u1/SC_RegFIXED_data_OutBUS
-add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/SC_Temp0/SC_RegGENERAL_data_OutBUS_A
-#add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/SC_RegGENERAL_u1/SC_RegGENERAL_data_OutBus
-#add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/SC_RegGENERAL_u2/SC_RegGENERAL_data_OutBus
-#add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/SC_RegGENERAL_u3/SC_RegGENERAL_data_OutBus
-#add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/SC_RegSHIFTER_u0/SC_RegSHIFTER_data_OutBus
-
-#add wave  -divider STATEMACHINE
-#add wave -noupdate -radix decimal /TB_SYSTEM/BB_SYSTEM_u0/SC_STATEMACHINE_u0/State_Register
-#
-#add wave  -divider ALU
-#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/CC_ALU_u0/CC_ALU_dataA_InBus
-#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/CC_ALU_u0/CC_ALU_dataB_InBus
-#add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/CC_ALU_u0/CC_ALU_data_OutBUS
-#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/CC_ALU_u0/CC_ALU_overflow_OutLow
-#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/CC_ALU_u0/CC_ALU_carry_OutLow
-#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/CC_ALU_u0/CC_ALU_negative_OutLow
-#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/CC_ALU_u0/CC_ALU_zero_OutLow
-#add wave -noupdate /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/CC_ALU_u0/CC_ALU_selection_InBUS
 
 add wave  -divider MAIN_MEMORY
 add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/MAIN_MEMORY_u0/MAIN_MEMORY_data_InBUS
-add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/MAIN_MEMORY_u0/MAIN_MEMORY_ADDRESS_data_InBUS
-add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/MAIN_MEMORY_u0/MAIN_MEMORY_RD_data_In
-add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/MAIN_MEMORY_u0/MAIN_MEMORY_WR_data_In
-add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/MAIN_MEMORY_u0/MAIN_MEMORY_CLOCK_50
+#add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/MAIN_MEMORY_u0/MAIN_MEMORY_ADDRESS_data_InBUS
+#add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/MAIN_MEMORY_u0/MAIN_MEMORY_RD_data_In
+#add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/MAIN_MEMORY_u0/MAIN_MEMORY_WR_data_In
+#add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/MAIN_MEMORY_u0/MAIN_MEMORY_CLOCK_50
 add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/MAIN_MEMORY_u0/MAIN_MEMORY_data_OutBUS
-add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/MAIN_MEMORY_u0/MAIN_MEMORY_ACK
+#add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/MAIN_MEMORY_u0/MAIN_MEMORY_ACK
+
+add wave  -divider Mux64T032
+add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/CC_MUXX_BUS_64_TO_32_u0/CC_MUX_BUS_64_TO_32_InBUS_Main_Memory
+#add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/CC_MUXX_BUS_64_TO_32_u0/CC_MUX_BUS_64_TO_32_ALU
+add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/CC_MUXX_BUS_64_TO_32_u0/CC_MUX_BUS_64_TO_32_RD
+add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/CC_MUXX_BUS_64_TO_32_u0/CC_MUX_data_OutBUS
+
+add wave  -divider uDATAPATH
+add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/uDATAPATH_BUS_C
+
+add wave  -divider IR_REGISTER
+add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/SC_IR/SC_RegGENERAL_data_InBUS
+add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/SC_IR/SC_RegGENERAL_data_OutBUS_A
+
+add wave  -divider MUX_REG_BUSS_A
+add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/CC_MUXX_REG_A/CC_MUX_registro_InBUS
+add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/CC_MUXX_REG_A/CC_MUX_selector_InBUS
+add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/CC_MUXX_REG_A/CC_MUX_control_InBUS
+add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/CC_MUXX_REG_A/CC_MUX_data_OutBUS
+
+add wave  -divider DECODER_C
+add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/CC_DECODER_C/CC_DECODER_datadecoder_OutBUS
+
+add wave  -divider REGISTER_SC_PC
+add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/SC_PC/SC_RegGENERAL_data_OutBUS_A
+
+add wave  -divider BUS_MUX_A
+add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/CC_MUXX_BusA/CC_MUX_data6_InBUS
+add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/CC_MUXX_BusA/CC_MUX_data_OutBUS
+
+add wave  -divider ALU
+add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/CC_ALU_u0/CC_ALU_dataA_InBUS
 
 restart
 run 1ms
@@ -60,3 +71,4 @@ configure wave -timeline 0
 configure wave -timelineunits ns
 update
 WaveRestoreZoom {59829352 ps} {60892417 ps}
+
