@@ -63,7 +63,15 @@ add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/CC_MUXX
 add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/CC_MUXX_REG_A/CC_MUX_control_InBUS
 add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/CC_MUXX_REG_A/CC_MUX_data_OutBUS
 
+add wave  -divider MUX_REG_BUSS_C
+add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/CC_MUXX_REG_C/CC_MUX_registro_InBUS
+add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/CC_MUXX_REG_C/CC_MUX_selector_InBUS
+add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/CC_MUXX_REG_C/CC_MUX_control_InBUS
+add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/CC_MUXX_REG_C/CC_MUX_data_OutBUS
+
+
 add wave  -divider DECODER_C
+add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/CC_DECODER_C/CC_DECODER_selection_InBUS
 add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/CC_DECODER_C/CC_DECODER_datadecoder_OutBUS
 
 add wave  -divider REGISTER_SC_PC
