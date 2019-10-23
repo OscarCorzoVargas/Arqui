@@ -107,6 +107,15 @@ add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/Centro_Control_u0/Ce
 add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/Centro_Control_u0/Centro_Control_CS_MIR/CS_MIR_COND_data_OutBUS
 add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/Centro_Control_u0/Centro_Control_CS_MIR/CS_MIR_ADDRESS_data_OutBUS
 
+add wave  -divider ADDRESS_MUX
+
+add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/Centro_Control_u0/Centro_Control_CS_ADDRESS_MUX/CS_CS_ADDRESS_MUX_data_Scratchpad
+add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/Centro_Control_u0/Centro_Control_CS_ADDRESS_MUX/CS_CS_ADDRESS_MUX_data_OutBUS
+
+add wave  -divider BUS_MUX_B
+add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/CC_MUXX_BusB/CC_MUX_selection_InBUS
+add wave  -noupdate -radix Unsigned /TB_SYSTEM/BB_SYSTEM_u0/uDATAPATH_u0/CC_MUXX_BusB/CC_MUX_data8_InBUS
+
 restart
 run 1ms
 
