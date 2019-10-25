@@ -101,6 +101,6 @@ assign CC_ALU_zero_OutLow=(CC_ALU_data_OutBUS==8'b00000000) ? 1'b0 : 1'b1;	// De
 assign CC_ALU_carry_OutLow = ~cout;
 assign CC_ALU_overflow_OutLow = ~ (caover ^ cout);		// Determinación de la flag Ov a partir de la flag Carry y el carry del bit 7
 assign CC_ALU_negative_OutLow = ~ (CC_ALU_data_OutBUS[DATAWIDTH_BUS-1]);
-assign Set_Conditions_Code = (CC_ALU_dataA_InBUS[3:2]==2'b00) ? 1'b0 : 1'b1;
+assign Set_Conditions_Code = (CC_ALU_selection_InBUS[3:2]==2'b00) ? 1'b0 : 1'b1;
 
 endmodule

@@ -24,25 +24,25 @@ begin
 	case(ALU_COND)
 	3'b000:CBL_OUT = 2'b00;
 	3'b001:begin
-	if(PSR_OUT[3]==1'b1)
+	if(PSR_OUT[0]==1'b1)
 	CBL_OUT = 2'b01;
 	else 
 	CBL_OUT = 2'b00;
 	end
 	3'b010:begin
-	if(PSR_OUT[2]==1'b1)
-	CBL_OUT = 2'b01;
-	else 
-	CBL_OUT = 2'b00;
-	end
-	3'b011:begin
 	if(PSR_OUT[1]==1'b1)
 	CBL_OUT = 2'b01;
 	else 
 	CBL_OUT = 2'b00;
 	end
+	3'b011:begin
+	if(PSR_OUT[2]==1'b1)
+	CBL_OUT = 2'b01;
+	else 
+	CBL_OUT = 2'b00;
+	end
 	3'b100:begin
-	if(PSR_OUT[0]==1'b1)
+	if(PSR_OUT[3]==1'b1)
 	CBL_OUT = 2'b01;
 	else 
 	CBL_OUT = 2'b00;

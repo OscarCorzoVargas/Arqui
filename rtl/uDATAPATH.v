@@ -8,6 +8,7 @@ module uDATAPATH #(parameter DATAWIDTH_BUS=32, parameter DATAWIDTH_DECODER_SELEC
 	uDATAPATH_carry_OutLow,
 	uDATAPATH_negative_OutLow,
 	uDATAPATH_zero_OutLow,
+	uDATAPATH_Habilitador_PSR,
 	uDATAPATH_Registro_IR,
 	uDATAPATH_BUS_A,
 	uDATAPATH_BUS_B,
@@ -40,6 +41,7 @@ output 	uDATAPATH_overflow_OutLow;
 output 	uDATAPATH_carry_OutLow;
 output 	uDATAPATH_negative_OutLow;
 output 	uDATAPATH_zero_OutLow;
+output	uDATAPATH_Habilitador_PSR;
 output 	[DATAWIDTH_BUS-1:0]uDATAPATH_Registro_IR;
 output	[DATAWIDTH_BUS-1:0]uDATAPATH_BUS_A;
 output	[DATAWIDTH_BUS-1:0]uDATAPATH_BUS_B;
@@ -258,6 +260,7 @@ CC_ALU #(.DATAWIDTH_BUS(DATAWIDTH_BUS), .DATAWIDTH_ALU_SELECTION(DATAWIDTH_ALU_S
 	.CC_ALU_carry_OutLow(uDATAPATH_carry_OutLow), 
 	.CC_ALU_negative_OutLow(uDATAPATH_negative_OutLow), 
 	.CC_ALU_zero_OutLow(uDATAPATH_zero_OutLow),
+	.Set_Conditions_Code(uDATAPATH_Habilitador_PSR),
 	.CC_ALU_data_OutBUS(uDATAPATH_data_OutBUS),
 	.CC_ALU_dataA_InBUS(uDATAPATH_BUS_A), 
 	.CC_ALU_dataB_InBUS(uDATAPATH_BUS_B),
