@@ -104,6 +104,8 @@ wire [DATAWIDTH_BUS-1:0] CC_MUXX_BUS_64_TO_32_TO_BUSSC_Cable;
 wire [DATAWIDTH_BUS-1:0] BUSA_To_Main_Memory_Cable;
 wire [DATAWIDTH_BUS-1:0] BUSB_To_Main_Memory_Cable;
 
+// CONEXIÓN QUE HABILITA LAS BANDERAS
+wire ALU_To_Centro_Control_Flag_Habilitador_Cable;
 //=======================================================
 //  Structural coding
 //=======================================================
@@ -114,6 +116,7 @@ uDATAPATH #(.DATAWIDTH_BUS(DATAWIDTH_BUS), .DATAWIDTH_DECODER_SELECTION(DATAWIDT
 	.uDATAPATH_carry_OutLow(uDATAPATH_2_STATEMACHINE_carry_wireCONTROL),
 	.uDATAPATH_negative_OutLow(uDATAPATH_2_STATEMACHINE_negative_wireCONTROL),
 	.uDATAPATH_zero_OutLow(uDATAPATH_2_STATEMACHINE_zero_wireCONTROL),
+	.uDATAPATH_Habilitador_PSR(ALU_To_Centro_Control_Flag_Habilitador_Cable),
 	.uDATAPATH_CLOCK_50(BB_SYSTEM_CLOCK_50),
 	.uDATAPATH_RESET_InHigh(BB_SYSTEM_RESET_InHigh),
 	.uDATAPATH_decoderclearselection_InBUS(STATEMACHINE_2_uDATAPATH_decoderclearselection_wireCONTROL), 
@@ -145,6 +148,7 @@ Centro_Control Centro_Control_u0 (
 	.Centro_Control_ALU_carry_Low(uDATAPATH_2_STATEMACHINE_carry_wireCONTROL),
 	.Centro_Control_ALU_negative_Low(uDATAPATH_2_STATEMACHINE_negative_wireCONTROL),
 	.Centro_Control_ALU_zero_Low(uDATAPATH_2_STATEMACHINE_zero_wireCONTROL),
+	.Centro_Control_Conditions_C(ALU_To_Centro_Control_Flag_Habilitador_Cable),
 	.Centro_Control_CLOCK_50(BB_SYSTEM_CLOCK_50),
 	.Centro_Control_RESET_InHigh(BB_SYSTEM_RESET_InHigh),
 	.Centro_Control_clear_InLow(Centro_Control_clear_InLow_Cable),
