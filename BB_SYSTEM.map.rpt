@@ -1,6 +1,6 @@
 Analysis & Elaboration report for BB_SYSTEM
-Fri Oct 25 09:07:47 2019
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Fri Oct 25 15:22:34 2019
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
 ---------------------
@@ -48,7 +48,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
+Copyright (C) 2017  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -56,19 +56,20 @@ functions, and any output files from any of the foregoing
 associated documentation or information are expressly subject 
 to the terms and conditions of the Intel Program License 
 Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel FPGA IP License Agreement, or other applicable license
-agreement, including, without limitation, that your use is for
-the sole purpose of programming logic devices manufactured by
-Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
 
 
 
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Fri Oct 25 09:07:47 2019       ;
-; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Analysis & Elaboration Status      ; Successful - Fri Oct 25 15:22:34 2019       ;
+; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; BB_SYSTEM                                   ;
 ; Top-level Entity Name              ; BB_SYSTEM                                   ;
 ; Family                             ; Cyclone IV E                                ;
@@ -413,91 +414,91 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                            ;
-+------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                           ; Setting            ; Default Value      ;
-+------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                           ; EP4CE22F17C6       ;                    ;
-; Top-level entity name                                            ; BB_SYSTEM          ; BB_SYSTEM          ;
-; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
-; Maximum processors allowed for parallel compilation              ; 4                  ;                    ;
-; Use smart compilation                                            ; Off                ; Off                ;
-; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
-; Enable compact report table                                      ; Off                ; Off                ;
-; Restructure Multiplexers                                         ; Auto               ; Auto               ;
-; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
-; Preserve fewer node names                                        ; On                 ; On                 ;
-; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
-; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
-; State Machine Processing                                         ; Auto               ; Auto               ;
-; Safe State Machine                                               ; Off                ; Off                ;
-; Extract Verilog State Machines                                   ; On                 ; On                 ;
-; Extract VHDL State Machines                                      ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
-; Parallel Synthesis                                               ; On                 ; On                 ;
-; DSP Block Balancing                                              ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                               ; On                 ; On                 ;
-; Power-Up Don't Care                                              ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
-; Remove Duplicate Registers                                       ; On                 ; On                 ;
-; Ignore CARRY Buffers                                             ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
-; Ignore LCELL Buffers                                             ; Off                ; Off                ;
-; Ignore SOFT Buffers                                              ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
-; Optimization Technique                                           ; Balanced           ; Balanced           ;
-; Carry Chain Length                                               ; 70                 ; 70                 ;
-; Auto Carry Chains                                                ; On                 ; On                 ;
-; Auto Open-Drain Pins                                             ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
-; Auto ROM Replacement                                             ; On                 ; On                 ;
-; Auto RAM Replacement                                             ; On                 ; On                 ;
-; Auto DSP Block Replacement                                       ; On                 ; On                 ;
-; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
-; Strict RAM Replacement                                           ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
-; Auto RAM Block Balancing                                         ; On                 ; On                 ;
-; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
-; Auto Resource Sharing                                            ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
-; Timing-Driven Synthesis                                          ; On                 ; On                 ;
-; Report Parameter Settings                                        ; On                 ; On                 ;
-; Report Source Assignments                                        ; On                 ; On                 ;
-; Report Connectivity Checks                                       ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
-; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
-; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
-; HDL message level                                                ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
-; Clock MUX Protection                                             ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
-; Block Design Naming                                              ; Auto               ; Auto               ;
-; SDC constraint protection                                        ; Off                ; Off                ;
-; Synthesis Effort                                                 ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
-+------------------------------------------------------------------+--------------------+--------------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                                      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE22F17C6       ;                    ;
+; Top-level entity name                                                      ; BB_SYSTEM          ; BB_SYSTEM          ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation                        ; 4                  ;                    ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; OpenCore Plus hardware evaluation                                          ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -547,75 +548,75 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
-    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Oct 25 09:07:28 2019
+    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+    Info: Processing started: Fri Oct 25 15:22:15 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off BB_SYSTEM -c BB_SYSTEM --analysis_and_elaboration
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Warning (20031): Parallel compilation is enabled for 4 processors, but there are only 2 processors in the system. Runtime may increase due to over usage of the processor space.
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/rom.v
-    Info (12023): Found entity 1: ROM File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/ROM.v Line: 1
+    Info (12023): Found entity 1: ROM File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/ROM.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/main_memory.v
-    Info (12023): Found entity 1: MAIN_MEMORY File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/MAIN_MEMORY.v Line: 4
+    Info (12023): Found entity 1: MAIN_MEMORY File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/MAIN_MEMORY.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/cc_psr.v
-    Info (12023): Found entity 1: CC_PSR File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/CC_PSR.v Line: 1
+    Info (12023): Found entity 1: CC_PSR File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/CC_PSR.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/cc_muxx_bus_64_to_32.v
-    Info (12023): Found entity 1: CC_MUXX_BUS_64_TO_32 File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/CC_MUXX_BUS_64_TO_32.v Line: 1
+    Info (12023): Found entity 1: CC_MUXX_BUS_64_TO_32 File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/CC_MUXX_BUS_64_TO_32.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/cbl.v
-    Info (12023): Found entity 1: CBL File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/CBL.v Line: 1
+    Info (12023): Found entity 1: CBL File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/CBL.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/cs_mir.v
-    Info (12023): Found entity 1: CS_MIR File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/CS_MIR.v Line: 4
+    Info (12023): Found entity 1: CS_MIR File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/CS_MIR.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/cs_csai.v
-    Info (12023): Found entity 1: CS_CSAI File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/CS_CSAI.v Line: 4
+    Info (12023): Found entity 1: CS_CSAI File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/CS_CSAI.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/cs_cs_address_mux.v
-    Info (12023): Found entity 1: CS_CS_ADDRESS_MUX File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/CS_CS_ADDRESS_MUX.v Line: 4
+    Info (12023): Found entity 1: CS_CS_ADDRESS_MUX File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/CS_CS_ADDRESS_MUX.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/udatapath.v
-    Info (12023): Found entity 1: uDATAPATH File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/uDATAPATH.v Line: 4
+    Info (12023): Found entity 1: uDATAPATH File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/uDATAPATH.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/sc_statemachine.v
-    Info (12023): Found entity 1: SC_STATEMACHINE File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/SC_STATEMACHINE.v Line: 21
+    Info (12023): Found entity 1: SC_STATEMACHINE File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/SC_STATEMACHINE.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/sc_regshifter.v
-    Info (12023): Found entity 1: SC_RegSHIFTER File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/SC_RegSHIFTER.v Line: 21
+    Info (12023): Found entity 1: SC_RegSHIFTER File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/SC_RegSHIFTER.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/sc_reggeneral.v
-    Info (12023): Found entity 1: SC_RegGENERAL File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/SC_RegGENERAL.v Line: 21
+    Info (12023): Found entity 1: SC_RegGENERAL File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/SC_RegGENERAL.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/sc_regfixed.v
-    Info (12023): Found entity 1: SC_RegFIXED File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/SC_RegFIXED.v Line: 21
+    Info (12023): Found entity 1: SC_RegFIXED File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/SC_RegFIXED.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/cc_muxx.v
-    Info (12023): Found entity 1: CC_MUXX File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/CC_MUXX.v Line: 21
+    Info (12023): Found entity 1: CC_MUXX File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/CC_MUXX.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/cc_decoder.v
-    Info (12023): Found entity 1: CC_DECODER File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/CC_DECODER.v Line: 21
+    Info (12023): Found entity 1: CC_DECODER File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/CC_DECODER.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/cc_alu.v
-    Info (12023): Found entity 1: CC_ALU File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/CC_ALU.v Line: 21
+    Info (12023): Found entity 1: CC_ALU File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/CC_ALU.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file bb_system.v
-    Info (12023): Found entity 1: BB_SYSTEM File: C:/Users/user/Documents/Arqui-master/Arqui-master/BB_SYSTEM.v Line: 21
+    Info (12023): Found entity 1: BB_SYSTEM File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/BB_SYSTEM.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/cc_muxx_bus.v
-    Info (12023): Found entity 1: CC_MUXX_BUS File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/CC_MUXX_BUS.v Line: 1
+    Info (12023): Found entity 1: CC_MUXX_BUS File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/CC_MUXX_BUS.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/centro_control.v
-    Info (12023): Found entity 1: Centro_Control File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/Centro_Control.v Line: 21
+    Info (12023): Found entity 1: Centro_Control File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/Centro_Control.v Line: 21
 Info (12127): Elaborating entity "BB_SYSTEM" for the top level hierarchy
-Warning (10034): Output port "BB_SYSTEM_data_OutBUS" at BB_SYSTEM.v(51) has no driver File: C:/Users/user/Documents/Arqui-master/Arqui-master/BB_SYSTEM.v Line: 51
-Info (12128): Elaborating entity "uDATAPATH" for hierarchy "uDATAPATH:uDATAPATH_u0" File: C:/Users/user/Documents/Arqui-master/Arqui-master/BB_SYSTEM.v Line: 140
-Info (12128): Elaborating entity "SC_RegGENERAL" for hierarchy "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R0" File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/uDATAPATH.v Line: 131
-Info (12128): Elaborating entity "CC_DECODER" for hierarchy "uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_CLEAR" File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/uDATAPATH.v Line: 209
-Info (12128): Elaborating entity "CC_MUXX" for hierarchy "uDATAPATH:uDATAPATH_u0|CC_MUXX:CC_MUXX_BusA" File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/uDATAPATH.v Line: 236
-Info (12128): Elaborating entity "CC_ALU" for hierarchy "uDATAPATH:uDATAPATH_u0|CC_ALU:CC_ALU_u0" File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/uDATAPATH.v Line: 268
-Warning (10036): Verilog HDL or VHDL warning at CC_ALU.v(55): object "addition0" assigned a value but never read File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/CC_ALU.v Line: 55
-Warning (10036): Verilog HDL or VHDL warning at CC_ALU.v(56): object "addition1" assigned a value but never read File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/CC_ALU.v Line: 56
-Info (12128): Elaborating entity "CC_MUXX_BUS" for hierarchy "uDATAPATH:uDATAPATH_u0|CC_MUXX_BUS:CC_MUXX_REG_A" File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/uDATAPATH.v Line: 276
-Info (12128): Elaborating entity "Centro_Control" for hierarchy "Centro_Control:Centro_Control_u0" File: C:/Users/user/Documents/Arqui-master/Arqui-master/BB_SYSTEM.v Line: 166
-Info (12128): Elaborating entity "CS_CSAI" for hierarchy "Centro_Control:Centro_Control_u0|CS_CSAI:Centro_Control_CS_CSAI" File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/Centro_Control.v Line: 115
-Info (12128): Elaborating entity "CS_CS_ADDRESS_MUX" for hierarchy "Centro_Control:Centro_Control_u0|CS_CS_ADDRESS_MUX:Centro_Control_CS_ADDRESS_MUX" File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/Centro_Control.v Line: 127
-Info (12128): Elaborating entity "CS_MIR" for hierarchy "Centro_Control:Centro_Control_u0|CS_MIR:Centro_Control_CS_MIR" File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/Centro_Control.v Line: 149
-Info (12128): Elaborating entity "CC_PSR" for hierarchy "Centro_Control:Centro_Control_u0|CC_PSR:Centro_Control_PSR" File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/Centro_Control.v Line: 161
-Info (12128): Elaborating entity "ROM" for hierarchy "Centro_Control:Centro_Control_u0|ROM:Centro_Control_ROM" File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/Centro_Control.v Line: 169
-Info (12128): Elaborating entity "CBL" for hierarchy "Centro_Control:Centro_Control_u0|CBL:Centro_Control_CBL" File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/Centro_Control.v Line: 178
-Info (12128): Elaborating entity "CC_MUXX_BUS_64_TO_32" for hierarchy "CC_MUXX_BUS_64_TO_32:CC_MUXX_BUS_64_TO_32_u0" File: C:/Users/user/Documents/Arqui-master/Arqui-master/BB_SYSTEM.v Line: 175
-Info (12128): Elaborating entity "MAIN_MEMORY" for hierarchy "MAIN_MEMORY:MAIN_MEMORY_u0" File: C:/Users/user/Documents/Arqui-master/Arqui-master/BB_SYSTEM.v Line: 187
-Warning (10762): Verilog HDL Case Statement warning at MAIN_MEMORY.v(40): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/MAIN_MEMORY.v Line: 40
-Warning (10034): Output port "MAIN_MEMORY_ACK" at MAIN_MEMORY.v(23) has no driver File: C:/Users/user/Documents/Arqui-master/Arqui-master/rtl/MAIN_MEMORY.v Line: 23
+Warning (10034): Output port "BB_SYSTEM_data_OutBUS" at BB_SYSTEM.v(51) has no driver File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/BB_SYSTEM.v Line: 51
+Info (12128): Elaborating entity "uDATAPATH" for hierarchy "uDATAPATH:uDATAPATH_u0" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/BB_SYSTEM.v Line: 140
+Info (12128): Elaborating entity "SC_RegGENERAL" for hierarchy "uDATAPATH:uDATAPATH_u0|SC_RegGENERAL:SC_R0" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/uDATAPATH.v Line: 131
+Info (12128): Elaborating entity "CC_DECODER" for hierarchy "uDATAPATH:uDATAPATH_u0|CC_DECODER:CC_DECODER_CLEAR" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/uDATAPATH.v Line: 209
+Info (12128): Elaborating entity "CC_MUXX" for hierarchy "uDATAPATH:uDATAPATH_u0|CC_MUXX:CC_MUXX_BusA" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/uDATAPATH.v Line: 236
+Info (12128): Elaborating entity "CC_ALU" for hierarchy "uDATAPATH:uDATAPATH_u0|CC_ALU:CC_ALU_u0" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/uDATAPATH.v Line: 268
+Warning (10036): Verilog HDL or VHDL warning at CC_ALU.v(35): object "addition0" assigned a value but never read File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/CC_ALU.v Line: 35
+Warning (10036): Verilog HDL or VHDL warning at CC_ALU.v(36): object "addition1" assigned a value but never read File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/CC_ALU.v Line: 36
+Info (12128): Elaborating entity "CC_MUXX_BUS" for hierarchy "uDATAPATH:uDATAPATH_u0|CC_MUXX_BUS:CC_MUXX_REG_A" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/uDATAPATH.v Line: 276
+Info (12128): Elaborating entity "Centro_Control" for hierarchy "Centro_Control:Centro_Control_u0" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/BB_SYSTEM.v Line: 166
+Info (12128): Elaborating entity "CS_CSAI" for hierarchy "Centro_Control:Centro_Control_u0|CS_CSAI:Centro_Control_CS_CSAI" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/Centro_Control.v Line: 115
+Info (12128): Elaborating entity "CS_CS_ADDRESS_MUX" for hierarchy "Centro_Control:Centro_Control_u0|CS_CS_ADDRESS_MUX:Centro_Control_CS_ADDRESS_MUX" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/Centro_Control.v Line: 127
+Info (12128): Elaborating entity "CS_MIR" for hierarchy "Centro_Control:Centro_Control_u0|CS_MIR:Centro_Control_CS_MIR" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/Centro_Control.v Line: 149
+Info (12128): Elaborating entity "CC_PSR" for hierarchy "Centro_Control:Centro_Control_u0|CC_PSR:Centro_Control_PSR" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/Centro_Control.v Line: 161
+Info (12128): Elaborating entity "ROM" for hierarchy "Centro_Control:Centro_Control_u0|ROM:Centro_Control_ROM" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/Centro_Control.v Line: 169
+Info (12128): Elaborating entity "CBL" for hierarchy "Centro_Control:Centro_Control_u0|CBL:Centro_Control_CBL" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/Centro_Control.v Line: 178
+Info (12128): Elaborating entity "CC_MUXX_BUS_64_TO_32" for hierarchy "CC_MUXX_BUS_64_TO_32:CC_MUXX_BUS_64_TO_32_u0" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/BB_SYSTEM.v Line: 175
+Info (12128): Elaborating entity "MAIN_MEMORY" for hierarchy "MAIN_MEMORY:MAIN_MEMORY_u0" File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/BB_SYSTEM.v Line: 187
+Warning (10762): Verilog HDL Case Statement warning at MAIN_MEMORY.v(40): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/MAIN_MEMORY.v Line: 40
+Warning (10034): Output port "MAIN_MEMORY_ACK" at MAIN_MEMORY.v(23) has no driver File: C:/Users/gabo/Documents/2019-2/arquitectura/Procesador/Arqui_Master_Funciona_Ascendente/Arqui-master/rtl/MAIN_MEMORY.v Line: 23
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4739 megabytes
-    Info: Processing ended: Fri Oct 25 09:07:47 2019
+    Info: Peak virtual memory: 4718 megabytes
+    Info: Processing ended: Fri Oct 25 15:22:34 2019
     Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:43
+    Info: Total CPU time (on all processors): 00:00:44
 
 
