@@ -61,7 +61,7 @@ wire addition1;		// Variable usada para la operación suma y para determinar las
 always@(*)
 begin
 	case (CC_ALU_selection_InBUS)	
-		4'b0000:  CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS & CC_ALU_dataB_InBUS;	//ANDCC
+		4'b0000:  CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS - CC_ALU_dataB_InBUS;	//SUBCC
 		4'b0001:  CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS | CC_ALU_dataB_InBUS;	//ORCC
 		4'b0010:  CC_ALU_data_OutBUS = ~(CC_ALU_dataA_InBUS | CC_ALU_dataB_InBUS); //NORCC	
 		4'b0011:  CC_ALU_data_OutBUS = CC_ALU_dataA_InBUS + CC_ALU_dataB_InBUS;	//ADDCC
